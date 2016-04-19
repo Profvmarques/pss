@@ -117,27 +117,7 @@ Processo('publico');
                 	<center>
                 	<div class="col-md-5">
 
-                    
-
-                      
-
-                 
-
-                    <div class="panel panel-primary"> 
-
-                    
-
                     <div class="panel panel-primary">
-
-								<div class="panel-heading">
-
-                    
-
-                    <h3 class="panel-title">ATULIZE OU IMPRIMA SUA FICHA</h3>
-
-					  </div>
-
-<div class="panel panel-primary">
 
 								<div class="panel-heading">
 
@@ -162,6 +142,24 @@ Processo('publico');
                     
 
                       </div>
+                      </div><!--FIM LINHA -->
+
+                      
+
+                 
+
+                    
+<div class="col-md-5">
+                    <div class="panel panel-primary">
+
+								<div class="panel-heading">
+
+                    
+
+                    <h3 class="panel-title">ATUALIZE OU IMPRIMA SUA FICHA</h3>
+
+					  </div>
+
 								
 
 								<div class="panel-body">
@@ -171,14 +169,14 @@ Processo('publico');
 
                                   <div class="table-responsive">
 
-								  <table class="table table-hover">
+								  <table width="99%" class="table table-hover">
 
 								    <tr class="active">
 
-								      <td width="27%"><label class=" control-label" for="textinput">INSCRIÇÃO</label></td>
+								      <td width="26%"><label class=" control-label" for="textinput">INSCRIÇÃO</label></td>
 
-								      <td width="53%"><b>CARGO</b></td>
-								      <td width="20%">&nbsp;</td>
+								      <td width="47%"><b>CARGO</b></td>
+								      <td width="27%" colspan="2">&nbsp;</td>
 							        </tr>
 
 								    
@@ -188,6 +186,8 @@ Processo('publico');
 
 								      <td><?php echo @mysql_result($rs,$i,'c.descricao');?></td>
 								      <td><a href="view/candidatos/ficha.php?id=<?php echo @mysql_result($rs,$i,'i.idinscricao');?>" target="_blank"><img src="img/imprimir.png" width="101" height="21" border="0" /></a></td>
+								      <td>&nbsp;
+<a href="default.php?pg=<?php echo base64_encode("view/candidatos/editar.php");?>&id=<?php echo @mysql_result($rs,$i,'i.idinscricao');?>" >Editar</a></td>
 
 							        </tr>
 
@@ -200,6 +200,7 @@ Processo('publico');
 
                     
 
+                    </div>
                     </div><!--FIM LINHA -->
 
                     

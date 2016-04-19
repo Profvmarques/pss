@@ -1,199 +1,249 @@
-﻿<?php
-require_once('controles/candidatos.php');
-Processo('editar');
-?>
-<script type='text/javascript' src='js/jquery-1.7.2.min.js'></script>
-        <script type='text/javascript' src='js/cep.js'></script>
-		 <script type='text/javascript' src='js/idade.js'></script>
-		 
-		 <script type="text/javascript">
- // COMENTÁRIO DESSA FUNÇÃO *********************************
-      $(document).ready(function(){
-        // Evento change no campo idtipo_segmento  
-         $("select[name=idtipo_segmento]").change(function(){
-            // Exibimos no campo idapartamentos antes de concluirmos
-			$("select[name=idmodulos]").html('<option value="">Carregando segmento escolar...</option>');
-            // Exibimos o campo sistemas antes de selecionamos o módulo, serve também em caso
-			// do usuario ja ter selecionado o tipo e resolveu trocar, com isso limpamos a
-			// seleção antiga caso tenha feito.
-			// Passando tipo por parametro para a pagina ajax_modulos.php
-            $.post("ajax/ajax_segmento_escolar.php",
-                  {idtipo_segmento:$(this).val()},
-                  // Carregamos o resultado acima para o campo marca
-				  function(valor){
-                     $("select[name=idsegmento_escolar]").html(valor);
-                  }
-                  )
-         });
-	  });      	  
-	   // COMENTÁRIO DESSA FUNÇÃO *********************************
-</script>
-<form class="form-horizontal" id="form" name="form" method="post">
-  <table width="1039">
-    <tr>
-      <td width="174">TIPO DE INSCRIÇÃO &nbsp;
-        <select name="idtipoinscricao" class="input-medium" id="idtipoinscricao">
-          <option value="1">PRÉ-INSCRIÇÃO</option>
-          <option value="2">TRANSFERÊNCIA</option>
-        </select></td>
-      <td width="474">TIPO DE SEGMENTO ESCOLAR  &nbsp;<span class="controls">
-        <select name="idtipo_segmento" class="input-xlarge" tabindex="1" id="idtipo_segmento" title="O campo tipo de segmento escolar é obrigatório">
-          <option value="">Escolha o tipo de segmento</option>
-          <?php for($i=0;$i<$linha2;$i++){?>
-          <option value="<?php echo mysql_result($rs2,$i,'idtipo_segmento');?>"><?php echo utf8_encode(mysql_result($rs2,$i,'descricao'));?></option>
-          <?php }?>
-        </select>
-      </span></td>
-      <td width="375">SEGMENTO  <span class="controls">
-        <select name="idsegmento_escolar" class="input-xlarge" tabindex="1" id="idsegmento_escolar" title="O campo segmento escolar é obrigatório">
-          <option value="">Escolha o segmento escolar</option>
-          
-        </select>
-      </span></td>
-    </tr>
-  </table>
-  <br />
-  
-  <table width="1010">
-    <tr>
-      <td width="224">CPF &nbsp; 
-      <input type="text" name="cpf" id="cpf" class="input-medium"  title="O campo cpf é obrigatório"  value="<?php echo $_POST['cpf']?>" />      </td>
-      <td width="306">RG/ÓRGÃO &nbsp;
-        <input type="text" name="rg" id="rg" class="input-medium" title="O campo rg é obrigatório" value="<?php echo $_POST['rg']?>"/>      </td>
-      <td width="464">NOME &nbsp;
-        <input name="nome" type="text" class="input-xlarge" id="nome" placeholder="" value="<?php echo $_POST['nome']?>"/></td>
-    </tr>
-  </table>
-  <br />
-  <table width="1010">
-    <tr>
-      <td width="209">SEXO &nbsp;
-        <select name="sexo" class="input-mini" id="sexo">
-		  <option value="M">M</option>
-		  <option value="F">F</option>		
-        </select></td>
-      <td width="327">NASCIMENTO&nbsp;<span style="margin-left:auto">
-        <input name="nascimento" type="text" class="input-medium" id="nascimento" onkeypress="return Mascaras_Format(document.form,'nascimento','99/99/9999',event);" size="20" maxlength="10" onblur="return valida_data1(document.form.nascimento,5);" value="<?php echo $_POST['nascimento']; ?>"  title="O campo nascimento é obrigatório" />
-        <span class="textos_red"><a title="Calendário" onclick="selectDate('form','nascimento')"><img src="img/calendar.gif" width="18" height="18" /></a></span></span></td>
-      <td width="458">IDADE &nbsp;
-      <input type="text" name="idade2" id="idade2" class="input-mini"  title="O campo idade é obrigatório" value="<?php echo $_POST['idade']?>"/></td>
-      <td width="458">ALTURA&nbsp;
-        <input type="text" name="altura_aluno" id="altura_aluno" class="input-mini" value="<?php echo $_POST['altura_aluno']?>"/></td>
-    </tr>
-  </table>
-  <br />
-  <table width="1010">
-    <tr>
-      <td width="377">PAI &nbsp;
-      <input name="pai" type="text" class="input-xlarge" id="pai" placeholder="" value="<?php echo $_POST['pai']?>"/></td>
-      <td width="348">MÃE &nbsp;
-      <input name="mae" type="text" class="input-xlarge" id="mae" placeholder="" value="<?php echo $_POST['mae']?>" /></td>
-      <td width="269">CEP&nbsp;
-        <input name="cep" type="text" class="input-mini" id="cep"  title="O campo cep é obrigatório" onkeypress="return Mascaras_Format(document.form,'cep','99999999',event);" value="<?php echo $_POST['cep']; ?>" maxlength="8" placeholder=""/></td>
-    </tr>
-  </table>
-  <br />
-  <table width="1010">
-    <tr>
-      <td width="405">ENDEREÇO&nbsp;
-        <input name="endereco" type="text" class="input-xlarge" id="endereco" placeholder="" value="<?php echo $_POST['endereco']?>"/></td>
-      <td width="219">NÚMERO&nbsp;
-      <input name="numero" type="text" class="input-mini" id="numero" placeholder="" value="<?php echo $_POST['numero']?>"/></td>
-      <td width="370">COMPLEMENTO
-      <input name="complemento" type="text" class="input-medium" id="complemento" placeholder="" value="<?php echo $_POST['complemento']?>" /></td>
-    </tr>
-  </table>
-  <br />
-  <table width="1010">
-    <tr>
-      <td width="417">BAIRRO&nbsp;
-      <input name="bairro" type="text" class="input-xlarge" id="bairro" placeholder=""  value="<?php echo $_POST['bairro']?>" /></td>
-      <td width="388">CIDADE&nbsp;
-      <input name="cidade" type="text" class="input-xlarge" id="cidade" placeholder="" value="<?php echo $_POST['cidade']?>" /></td>
-      <td width="189">UF&nbsp;
-      <input name="uf" type="text" class="input-mini" id="uf" placeholder="" value="<?php echo $_POST['uf']?>"/></td>
-    </tr>
-  </table>
-  <br />
-  <table width="1010">
-    <tr>
-      <td width="275">TELEFONE &nbsp;
-          <input name="telefone" type="text" class="input-medium" id="telefone" title="Campo telefone é obrigatório" onkeypress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo $_POST['telefone']; ?>" maxlength="15" placeholder="" />    </td>
-      <td width="284">CELULAR &nbsp; <input name="celular" type="text" class="input-medium" id="celular" title="Campo celular &eacute; obrigat&oacute;rio" onkeypress="return Mascaras_Format(document.form,'celular','(99) 99999-9999',event);" value="<?php echo $_POST['celular']; ?>" maxlength="15" placeholder="" /></td>
-      <td width="435">E-MAIL: &nbsp;
-        <input name="email" type="text" class="input-medium" id="email" placeholder="" data-rule-email="true" data-rule-required="true" value="<?php echo $_POST['email']; ?>"  title="O campo e-mail é obrigatório"/>
-      </td>
-    </tr>
-  </table>
-  <br />
-  <table width="1010">
-    <tr>
-      <td width="421">RESPONSÁVEL&nbsp;
-      <input name="responsavel" type="text" class="input-xlarge" id="responsavel" placeholder="" value="<?php echo $_POST['responsavel']?>" /></td>
-      <td width="317">NÚMERO DE IRMÃOS &nbsp;
-      <input name="num_irmaos" type="text" class="input-mini" id="num_irmaos" placeholder="" value="<?php echo $_POST['num_irmaos']?>"/></td>
-      <td width="256">RENDA &nbsp;
-        <select name="idrendafamiliar" class="input-medium" id="idrendafamiliar">
-          
-          <option value="">--</option>
-		  <?php for($i=0;$i<$linha3;$i++){?>
-          <option value="<?php echo mysql_result($rs3,$i,'idrendafamiliar');?>"><?php echo utf8_encode(mysql_result($rs3,$i,'descricao'));?></option>
-          <?php }?>
-        </select></td>
-    </tr>
-  </table>
- <br />
- <table width="1010">
-  <tr>
-    <td>NECESSIDADE ESPECIAL : &nbsp;
-      <input name="auditiva" type="checkbox" id="auditiva" />      &nbsp;
-AUDITIVA &nbsp;
-<input name="visual" type="checkbox" id="visual" />
-&nbsp;
-VISUAL &nbsp;
-<input name="motora" type="checkbox" id="motora" />
-&nbsp;
-MOTORA &nbsp;
-<input name="mental" type="checkbox" id="mental" />
-&nbsp;
-MENTAL </td>
-  </tr>
-  
-</table>
-</br>
-<table width="1010">
-    <tr>
-      <td>UNIFORME
-      <hr />
-      <table width="1010">
-        <tr>
-          <td width="273">CAMISA&nbsp;
-            <input name="camisa_aluno" type="text" class="input-mlarge" id="camisa_aluno" placeholder=""  value="<?php echo $_POST['camisa_aluno']?>" /></td>
-          <td width="275">BERMUDA&nbsp;
-            <input name="bermuda_aluno" type="text" class="input-mlarge" id="bermuda_aluno" placeholder="" value="<?php echo $_POST['bernuda_aluno']?>" /></td>
-          <td width="196">PÉ&nbsp;
-            <input name="pe_aluno" type="text" class="input-mini" id="pe_aluno" placeholder="" value="<?php echo $_POST['pe_aluno']?>"/></td>
-          <td width="238">MEIAS&nbsp;
-            <input name="meias_aluno" type="text" class="input-mini" id="meias_aluno" placeholder="" value="<?php echo $_POST['meias_aluno']?>"/></td>
-        </tr>
-      </table></td>
-    </tr>
-  </table>
-
- <br />
-  <div class="form-actions">
-                                  <div align="center">
-                                    <button type="button" class="btn btn-primary" onClick="validar(document.form);">
-                                    </i> SALVAR</button>
-                                    <button type="button" class="btn" >CANCELAR</button>
-                                    <input name="ok" type="hidden" id="ok"/>
-                                  </div>
-  </div>
-</form>
-<script>
-document.form.idtipoinscricao.value='<?php echo @mysql_result($rs,0,'ti.idtipoinscricao');?>';
-document.form.idtipo_segmento.value='<?php echo @mysql_result($rs,0,'i.idtipo_segmento');?>';
-document.form.idsegmento_escolar.value='<?php echo @mysql_result($rs,0,'se.idsegmento_escolar');?>';
-document.form.sexo.value='<?php echo @mysql_result($rs,0,'c.sexo');?>';
-document.form.idrendafamiliar.value='<?php echo @mysql_result($rs,0,'i.idrendafamiliar');?>';
+﻿<?php
+require_once('controles/inscricao.php');
+Processo('editarPublico');
+?>
+
+		 <script type='text/javascript' src='js/idade.js'></script>
+
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->	
+        	
+		<script src="js/bootstrap.min.js"></script>
+				
+		<!-- datetimepicker -->
+		
+		<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+		<!--
+		<script type="text/javascript">
+		      $('#sandbox-container input').datepicker({
+              });
+		</script>-->
+		
+
+
+ 
+	 
+	 <body>
+	   <div class="container">
+		 <form class="form-horizontal"  id="form" name="form" method="post" > 
+					
+					<!--DADOS GERAIS -->
+					
+					<center>									   
+						<h3>
+						  <legend>ATUALIZAÇÃO DOS DADOS DO CANDIDATO</legend>
+						</h3>
+					</center> 
+                    
+             
+		   <div class="form-group">							
+						<div class="row-fluid">
+							<!--<div class="col-md-4">    
+									<label class="control-label" for="textinput" name=> PRÉ-INSCINCRIÇÃO DE MATRÍCULA:</label> 				
+									<select class="form-control" name="idtipoinscricao" id="idtipoinscricao">
+									<option value='1'  label=''>MATRÍCULA</option>
+                                    </select>
+									<br />							
+							
+							</div>-->
+							<div class="col-md-6"><br />           
+							</div>
+						</div>
+						<div class="row-fluid"><!-- fim col -->
+             </div><!-- fim ROW -->
+                        </div>
+                   
+			       
+					<div class="form-group">							
+						<div class="row-fluid">
+							<div class="col-md-4">    
+							  <label class=" control-label" for="textinput"> CPF:</label> <input name="cpf" type="text"/  class="form-control" id="cpf"  title="O campo cpf é obrigatório" value="<?php echo $_POST['cpf']?>" maxlength="11"><br />				
+							</div>
+                            <div class="col-md-4">    
+									 <label class=" control-label" for="textinput"> RG:</label> <input type="text" name="rg" id="rg"  title="O campo rg é obrigatório" value="<?php echo $_POST['rg']?>"/  class="form-control"><br />				
+							</div>
+                            <div class="col-md-3" >	
+									
+									<label class="control-label" for="textinput">DATA DE EXPEDIÇÃO: </label>									
+									<div class='input-group date' id='datepicker'>
+										<input name="data_expedicao" type="text" class="form-control" id="data_expedicao" onKeyPress="return Mascaras_Format(document.form,'data_expedicao','99/99/9999',event);" size="20" maxlength="10" onBlur="return valida_data1(document.form.data_expedicao,5);" value="<?php echo $_POST['data_expedicao']; ?>"  title="O campo data de expedição é obrigatório" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>									
+									
+						  </div>
+							<div class="col-md-8">	
+									<label class=" control-label" for="textinput"> NOME COMPLETO:</label> <input name="nome" type="text"  id="nome" placeholder="" value="<?php echo $_POST['nome']?>"/   class="form-control"><br />
+							</div>							
+						</div>
+						<div class="row-fluid">
+							<div class="col-md-3" >	
+									
+									<label class="control-label" for="textinput">NASCIMENTO: </label>									
+									<div class='input-group date' id='datepicker'>
+										<input name="nascimento" type="text" class="form-control" id="nascimento" onKeyPress="return Mascaras_Format(document.form,'nascimento','99/99/9999',event);" size="20" maxlength="10" onBlur="return valida_data1(document.form.nascimento,5);" value="<?php echo $_POST['nascimento']; ?>"  title="O campo nascimento é obrigatório" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>									
+									
+							</div>
+							<div class="col-md-3" ><br />
+						  </div>
+                          <div class="col-md-3" >	 
+							<label class="control-label" for="textinput">SEXO: </label>
+							<select name='sexo'class="form-control" id="sexo">
+							  <option value='M'  label=''>M</option>
+							  <option value='F' label=''>F</option>
+						    </select>
+                          </div>							
+						</div>
+						<div class="row-fluid">
+							<div class="col-md-4" >	 
+									<label class="control-label" for="textinput">ENDEREÇO: </label>
+									<input name="endereco" type="text" class="form-control" id="endereco" placeholder="" value="<?php echo $_POST['endereco']?>"/>
+							</div>
+                            <div class="col-md-3" >	 
+									<label class="control-label" for="textinput">NÚMERO: </label>
+									<input name="numero" type="text" class="form-control" id="numero" placeholder="" value="<?php echo $_POST['numero']?>"/>
+                            </div>
+                            <div class="col-md-4" >	 
+									<label class="control-label" for="textinput">COMPLEMENTO: </label>
+									<input name="complemento" type="text" class="form-control" id="complemento" placeholder="" value="<?php echo $_POST['complemento']?>" />
+                            </div>                            							
+						</div>
+						<div class="row-fluid">
+							<div class="col-md-3" >	 
+									<label class="control-label" for="textinput">BAIRRO: </label>
+									<input name="bairro" type="text" class="form-control" id="bairro" placeholder=""  value="<?php echo $_POST['bairro']?>" />
+							</div>
+                          <div class="col-md-3" >	 
+							<label class="control-label" for="textinput">MUNICÍPIO: </label>
+								  <input name="municipio" type="text" class="form-control" id="municipio" placeholder="" value="<?php echo $_POST['municipio']?>" />
+                            </div>
+                            <div class="col-md-3" >	 
+									<label class="control-label" for="textinput">UF: </label>
+									<input name="uf" type="text" class="form-control" id="uf" placeholder="" value="<?php echo $_POST['uf']?>"/>
+                            </div>
+                            <div class="col-md-3" >	 
+									<label class="control-label" for="textinput">CEP: </label>
+									<input name="cep" type="text" class="form-control" id="cep"  title="O campo cep é obrigatório" onKeyPress="return Mascaras_Format(document.form,'cep','99999999',event);" value="<?php echo $_POST['cep']; ?>" maxlength="8" placeholder=""/>
+                            </div>							
+						</div>
+						<div class="row-fluid">
+							<div class="col-md-4" >	 
+									<label class="control-label" for="textinput">TEL.: </label>
+									<input name="telefone" type="text" class="form-control" id="telefone" title="Campo telefone é obrigatório" onKeyPress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo $_POST['telefone']; ?>" maxlength="15" placeholder="" />
+							</div>
+                            <div class="col-md-4" >	 
+									<label class="control-label" for="textinput">CEL.: </label>
+									<input name="celular" type="text" class="form-control" id="celular" title="Campo celular &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'celular','(99) 99999-9999',event);" value="<?php echo $_POST['celular']; ?>" maxlength="15" placeholder="" />
+                            </div>
+                            <div class="col-md-4" >	 
+									<label class="control-label" for="textinput">EMAIL: </label>
+									<input name="email" type="text" class="form-control" id="email" placeholder="" data-rule-email="true" data-rule-required="true" value="<?php echo $_POST['email']; ?>"  title="O campo e-mail é obrigatório"/>
+                            </div>							
+						</div>
+                        <div class="col-md-6">
+                        <br />
+						  <label class=" control-label" for="textinput3" > CARGO PRETENDIDO:</label>
+						  <span style="margin-left:auto">
+						    <select name="idcargos" class="form-control" tabindex="1" id="idcargos" title="O campo cargo pretendido é obrigatório" >
+						      <option value="">Escolha o cargo pretendido</option>
+						      <?php for($i=0;$i<$linha;$i++){?>
+						      <option value="<?php echo mysql_result($rs,$i,'idcargos');?>"><?php echo utf8_encode(mysql_result($rs,$i,'descricao'));?></option>
+						      <?php }?>
+					      </select>
+					      </span><br />
+					  </div>
+                      <div class="col-md-6">
+                        <br />
+					    <label class=" control-label" for="textinput3" > TITULAÇÃO:</label>
+						  <span style="margin-left:auto">
+						    <select name="idtitulacao" class="form-control" tabindex="1" id="idtitulacao" title="O campo titulação é obrigatório" >
+						      <option value="">Escolha a titulação</option>
+						      <?php for($i=0;$i<$linha2;$i++){?>
+						      <option value="<?php echo mysql_result($rs2,$i,'idtitulacao');?>"><?php echo utf8_encode(mysql_result($rs2,$i,'descricao'));?></option>
+						      <?php }?>
+					      </select>
+				        </span><br />
+					  </div>
+                      <div class="col-md-6">
+                        <br />
+					    <label class=" control-label" for="textinput3" > EXPERIÊNCIA PROFISSIONAL:</label>
+						  <span style="margin-left:auto">
+						    <select name="idexperiencia" class="form-control" tabindex="1" id="idexperiencia" title="O campo experiência profissional é obrigatório">
+						      <option value="">Escolha os anos de experiência profissional</option>
+						      <?php for($i=0;$i<$linha3;$i++){?>
+						      <option value="<?php echo mysql_result($rs3,$i,'idexperiencia');?>"><?php echo utf8_encode(mysql_result($rs3,$i,'descricao'));?></option>
+						      <?php }?>
+					      </select>
+				        </span><br />
+					  </div>
+						<div class="row-fluid">							
+							<div class="col-md-12" >
+                           
+							</div>
+							
+						</div>				
+					</div>
+           <!-- FILIAÇÃO -->
+                    
+                    <center>									   
+						<h3><legend>SENHA DE ACESSO PARA IMPRIMIR / EDITAR</legend>
+						</h3>
+					</center> 
+					<div class="form-group">							
+						<div class="row-fluid">
+						  <div class="col-md-4">	
+						    <label class=" control-label" for="textinput"> SENHA DE ACESSO:</label>
+						    <input name="senha" type="password" class="form-control" id="senha" placeholder="" data-rule-email="true" data-rule-required="true" value="<?php echo $_POST['senha']; ?>"  title="O campo senha é obrigatório"/>
+						    <br />
+							</div>							
+						</div>						
+					</div>
+					<div class="form-group">
+							<div style="text-align: center;">
+							    <button type="button" class="btn btn-primary" onClick="validar(document.form);">
+                                    </i> SALVAR</button>
+                                    <button type="button" class="btn" onClick="javascript:history.back()" >CANCELAR</button>
+                                    <input name="ok" type="hidden" id="ok"/>
+					</div>					
+					
+			 
+		 </form>
+        </div>
+        
+        
+        
+<script>
+document.form.idtipo_segmento.value='<?php echo $_POST['idtipo_segmento']?>';
+document.form.idsegmento_escolar.value='<?php echo $_POST['idsegmento_escolar']?>';
+document.form.sexo.value='<?php echo $_POST['sexo']?>';
+var sprypassword1 = new Spry.Widget.ValidationPassword("sprypassword1");
 </script>
+ <script>
+ document.form.idcargos.value='<?php echo $_POST['idcargos'];?>';
+ document.form.idtitulacao.value='<?php echo $_POST['idtitulacao'];?>';
+ document.form.idexperiencia.value='<?php echo $_POST['idexperiencia'];?>';
+ </script>
+
+        <script src="js/bootstrap-datepicker.min.js"></script><!---->
+		
+        <script type="text/javascript">            
+            $(document).ready(function () {                
+                $('#datepicker').datepicker({
+                    format: "dd/mm/yyyy",
+					language: "pt-BR
+                });				
+            });
+        </script>
+        	 	 
+	 </body>
+	 
+ </html>
