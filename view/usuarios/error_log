@@ -1,0 +1,2 @@
+[16-Nov-2015 11:38:34] PHP Warning:  require_once(controles/usuarios.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/sgm/public_html/view/usuarios/alterar_senha.php on line 2
+[16-Nov-2015 11:38:34] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'controles/usuarios.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/sgm/public_html/view/usuarios/alterar_senha.php on line 2

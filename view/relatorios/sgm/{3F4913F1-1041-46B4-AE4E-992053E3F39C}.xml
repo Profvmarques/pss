@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<configuration date="2014/11/26" author="e.World Technology Ltd.">
+<project id="{3F4913F1-1041-46B4-AE4E-992053E3F39C}" file="C:\wamp\www\sgm\sgm.prp" name="sgm" product="PHPReportMaker" version="7.0" datetime="2014/11/26 00:37:11" languagefolder="phprptlang" userlevel="0,&quot;Default&quot;,0">
+<table id="candidatos" name="candidatos" caption="candidatos" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="distrito" name="distrito" caption="distrito" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="eventos" name="eventos" caption="eventos" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="inscricao" name="inscricao" caption="inscricao" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="logradouro" name="logradouro" caption="logradouro" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="logs" name="logs" caption="logs" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="matricula" name="matricula" caption="matricula" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="ocorrencias" name="ocorrencias" caption="ocorrencias" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="perfil" name="perfil" caption="perfil" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="propostamatricula" name="propostamatricula" caption="propostamatricula" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="rendafamiliar" name="rendafamiliar" caption="rendafamiliar" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="segmentoescolar" name="segmentoescolar" caption="segmentoescolar" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="tipoinscricao" name="tipoinscricao" caption="tipoinscricao" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="tiposegmento" name="tiposegmento" caption="tiposegmento" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="unidade_escolar" name="unidade_escolar" caption="unidade escolar" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="usuarios" name="usuarios" caption="usuarios" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="vagas" name="vagas" caption="vagas" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="RelEstatisticoUE" name="RelEstatisticoUE" caption="Rel Estatistico UE" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+<table id="RelEstatisticoDistrito" name="RelEstatisticoDistrito" caption="Rel Estatistico Distrito" userlevel="0,&quot;Default&quot;,0" priv="1"/>
+</project></configuration>
