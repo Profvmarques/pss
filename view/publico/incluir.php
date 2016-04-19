@@ -115,10 +115,15 @@ Processo('publico');
                     <strong><div class="container">
 
                 	<center>
+                	<div class="col-md-5">
 
-			   		<div class="row-fluid">
+                    
 
-                    <div class="col-md-5">
+                      
+
+                 
+
+                    <div class="panel panel-primary"> 
 
                     
 
@@ -126,61 +131,13 @@ Processo('publico');
 
 								<div class="panel-heading">
 
-									<h3 class="panel-title">REALIZE SUA INSCRIÇÃO</h3>									
+                    
 
-								</div>
-
-								<!-- <img src="imagens/INSCRICAO.png" alt="100%"  class="img-responsive center-block" />
-
-								<div class="panel-body"><img src="img/pre-inscricao.png" border="0" class="img-responsive" /></a><!--								
-
-									<img src="imagens/INSCRICAO.png" alt="" class="img-responsive img-rounded"> -->
-
-
-<!-- LINK DE MATRICULA DE SEGUNDA FASE -->
-
-<!-- em manutenção 29/01/16
-<a href="default.php?pg=<?php echo base64_encode("view/candidatos/incluirInfantil_Fundamental_Eja_Etapa2.php");?>&form=<?php echo base64_encode("Pr&eacute;-inscri&ccedil;&atilde;o de Candidato");?>&ti=<?php echo base64_encode("1");?>"><img src="img/pre-inscricao.png" border="0" class="img-responsive" /></a>
-								</br>
-                                <a href="default.php?pg=<?php echo base64_encode("view/candidatos/incluirInfantil_Fundamental_Eja_Etapa2.php");?>&form=<?php echo base64_encode("Pr&eacute;-inscri&ccedil;&atilde;o de Candidato");?>&ti=<?php echo base64_encode("1");?>">MATR&Iacute;CULAS DE SEGUNDA FASE</a>
-                                
-                                <BR>
-        
-
-FIM DO LINK DE MATRICULA DE SEGUNDA FASE -->
-
-<div class="alert alert-info" role="alert">
- 
- <h1 align="center"> 
- <a href="default.php?pg=<?php echo base64_encode("view/candidatos/incluir.php");?>&amp;form=<?php echo base64_encode("Realize sua inscri&ccedil;&atilde;o");?>&amp;ti=<?php echo base64_encode("2");?>">
- <img src="img/pre-inscricao.png" />
- </a><br />
- </h1>
- 
- </div>
-
+                    <h3 class="panel-title">ATULIZE OU IMPRIMA SUA FICHA</h3>
 
 					  </div>
 
-								
-
-					  </div>
-
-                          
-
-                         
-
-                    
-
-   <!-- PAINEL DE TERMOS --><!--FIM COLUNA -->
-
-                    </div>
-
-                    
-
-                     <div class="col-md-5">
-
-                    <div class="panel panel-primary">
+<div class="panel panel-primary">
 
 								<div class="panel-heading">
 
@@ -204,26 +161,7 @@ FIM DO LINK DE MATRICULA DE SEGUNDA FASE -->
 
                     
 
-                      </div><!--FIM LINHA -->
-
-                      
-
-                 
-
-                    <div class="row-fluid"> 
-
-                    
-
-                    <div class="panel panel-primary">
-
-								<div class="panel-heading">
-
-                    
-
-                    <h3 class="panel-title">ATULIZE OU IMPRIMA SUA FICHA</h3>
-
-					  </div>
-
+                      </div>
 								
 
 								<div class="panel-body">
@@ -249,7 +187,7 @@ FIM DO LINK DE MATRICULA DE SEGUNDA FASE -->
 								      <td><?php echo "000".@mysql_result($rs,$i,'i.idinscricao');?></td>
 
 								      <td><?php echo @mysql_result($rs,$i,'c.descricao');?></td>
-								      <td><a href="view/candidatos/ficha.php?id=<?php echo @mysql_result($rs3,$i,'i.idinscricao');?>" target="_blank"><img src="img/imprimir.png" width="101" height="21" border="0" /></a></td>
+								      <td><a href="view/candidatos/ficha.php?id=<?php echo @mysql_result($rs,$i,'i.idinscricao');?>" target="_blank"><img src="img/imprimir.png" width="101" height="21" border="0" /></a></td>
 
 							        </tr>
 
