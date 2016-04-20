@@ -10,13 +10,14 @@ Processo('publico');
 
 <!-- códigos para modal-->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   
   <script>   
-  $(document).ready(function() {
+  /*$(document).ready(function() {
    $('#myModal').modal('show');
-  });   
+  });  */ 
   </script>
   
    
@@ -33,25 +34,9 @@ Processo('publico');
   
   </style>
   
-    <!-- FIM códigos para modal-->
-
-
-
-
-
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<!-- Optional theme -->
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-		<!-- Latest compiled and minified JavaScript -->		
-
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
 <div class="container">
 
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="oomyModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal conteúdo-->
@@ -185,7 +170,7 @@ Processo('publico');
 								      <td><?php echo "000".@mysql_result($rs,$i,'i.idinscricao');?></td>
 
 								      <td><?php echo @mysql_result($rs,$i,'c.descricao');?></td>
-								      <td><a href="view/candidatos/ficha.php?id=<?php echo @mysql_result($rs,$i,'i.idinscricao');?>" target="_blank"><img src="img/imprimir.png" width="101" height="21" border="0" /></a></td>
+								      <td><a href="view/candidatos/ficha.php?id=<?php echo @mysql_result($rs,$i,'i.idinscricao');?>" target="_blank"><img src="img/lista.png" width="101" height="21" border="0" /></a></td>
 								      <td>&nbsp;
 <a href="default.php?pg=<?php echo base64_encode("view/candidatos/editar.php");?>&id=<?php echo @mysql_result($rs,$i,'i.idinscricao');?>" >Editar</a></td>
 

@@ -55,7 +55,7 @@
 
             </button>
 
-            <a href="default.php?pg=<?php echo base64_encode("view/publico/incluir3.php");?>&form=<?php echo base64_encode("Painel");?>" class="navbar-brand">Principal</a>
+            <a href="default.php?pg=<?php echo base64_encode("view/publico/incluir.php");?>&form=<?php echo base64_encode("Painel");?>" class="navbar-brand">Principal</a>
 
         </div>
 
@@ -66,50 +66,7 @@
             <ul class="nav navbar-nav">
 
                 
-
-                
-
-                
-
-                <li class="dropdown">
-
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Cadastros <b class="caret"></b></a>
-
-                    
-
-                    <ul role="menu" class="dropdown-menu">
-
-                        <li><a href="default.php?pg=<?php echo base64_encode("view/vagas/incluir.php");?>&form=<?php echo base64_encode("Cadastro de Vagas");?>">Vagas</a></li>                                          </ul>
-
-                </li>
-
-                
-
-                
-
-                
-
-                <li class="dropdown">
-
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Consulta<b class="caret"></b></a>
-
-                    <ul role="menu" class="dropdown-menu">
-
-                        <li><a href="default.php?pg=<?php echo base64_encode("view/vagas/editar.php");?>&form=<?php echo base64_encode("Consulta de Vagas");?>">Vagas</a></li>
-
-                        
-
-                        <li><a href="default.php?pg=<?php echo base64_encode("view/vagas/atualizarVagas.php");?>&form=<?php echo base64_encode("Atualizar Quadro de Vagas");?>">Atualizar quadro de vagas</a></li>
-
-                        
-
-                        <li><a href="default.php?pg=<?php echo base64_encode("view/candidatos/atualizarClassificacao.php");?>&form=<?php echo base64_encode("Atualizar Classificação");?>">Atualizar classifica&ccedil;&atilde;o</a></li>                        
-
-                    </ul>
-
-                </li>
-
-                
+            
 
                 <li><a href="logoff.php">Sair</a></li>
 
@@ -208,11 +165,15 @@ if ($_SESSION['idperfil']==2){
                 
                 
                 
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Cadastros <b class="caret"></b></a>
+            <li class="dropdown">
+               <a data-toggle="dropdown" class="dropdown-toggle" href="#">Cadastros <b class="caret"></b></a>
                     
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Vagas</a></li>                                          </ul>
+               <ul role="menu" class="dropdown-menu">
+                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Cargos</a></li>
+                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Experiencia</a></li>
+                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Titulação</a></li>
+                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Usuários</a></li>                                                  
+                                                          </ul>
                 </li>
                 
                 
@@ -220,18 +181,10 @@ if ($_SESSION['idperfil']==2){
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Consulta<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a href="default.php?pg=dmlldy92YWdhcy9lZGl0YXIucGhw&amp;form=Q29uc3VsdGEgZGUgVmFnYXM=">Vagas</a></li>
-                        
-                        <li><a href="default.php?pg=dmlldy92YWdhcy9hdHVhbGl6YXJWYWdhcy5waHA=&amp;form=QXR1YWxpemFyIFF1YWRybyBkZSBWYWdhcw==">Atualizar quadro de vagas</a></li>
-                        
-                        <li><a href="default.php?pg=dmlldy9jYW5kaWRhdG9zL2F0dWFsaXphckNsYXNzaWZpY2FjYW8ucGhw&amp;form=QXR1YWxpemFyIENsYXNzaWZpY2HDp8Ojbw==">Atualizar classificação</a></li>
-                        
-                      
-                        
-                        
-                        
-                        
-                        
+                    <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Cargos</a></li>
+                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Experiencia</a></li>
+                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Titulação</a></li>
+                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Usuários</a></li>
                     </ul>
                 </li>
                 

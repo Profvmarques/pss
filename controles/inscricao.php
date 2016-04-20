@@ -18,7 +18,7 @@ function Processo($Processo) {
             global $linha;
             global $rs;
 
-            $inscricao = new Candidatos();
+            $inscricao = new Inscricao();
             $util = new Util();
 
             if ($_POST['ok'] == 'true') {
@@ -144,7 +144,7 @@ function Processo($Processo) {
             $linha3 = $inscricao->Linha;
             $rs3 = $inscricao->Result;
 
-            
+
 
 
 
@@ -154,26 +154,26 @@ function Processo($Processo) {
 
                     $usuarios->verificarCPF($_POST['cpf']);
                     $cpf_valido = $util->validaCPF($_POST['cpf']);
-                    
+
                     if ($cpf_valido == false) {
                         $_POST['ok'] = false;
                         $util->msgbox("CPF INVÁLIDO! VERIFIQUE A SEQUÊNCIA DE NÚMEROS INFORMADA");
-                    } 
-                    if ($usuarios->Achou == 'nao' && $cpf_valido==true) {
+                    }
+                    if ($usuarios->Achou == 'nao' && $cpf_valido == true) {
                         $pontos = 0;
                         $inscricao->consultar("BEGIN");
 
                         $pontos+=$titulacao->obterPontos($_POST['idtitulacao']);
                         $pontos+=$experiencia->obterPontos($_POST['idexperiencia']);
 
-                        
+
                         $idusuarios = $usuarios->incluirPublico($_POST['cpf'], $_POST['senha'], 1);
                         //Para resolver o insert do logs
-                        if($_GET['cadastro']==1){
-                            $_SESSION['idusuarios'] =$idusuarios;
+                        if ($_GET['cadastro'] == 1) {
+                            $_SESSION['idusuarios'] = $idusuarios;
                         }
 
-                        $idinscricao=$inscricao->incluir($_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), $_POST['nome'], $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), $_POST['endereco'],$_POST['complemento'], $_POST['bairro'], $_POST['municipio'], $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], $_POST['email'], $_POST['idcargos'], $_POST['idexperiencia'], $_POST['idtitulacao'], $idusuarios, $pontos);
+                        $idinscricao = $inscricao->incluir($_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), $_POST['nome'], $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), $_POST['endereco'], $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['municipio'], $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], $_POST['email'], $_POST['idcargos'], $_POST['idexperiencia'], $_POST['idtitulacao'], $idusuarios, $pontos);
 
                         $descricao = "Realizado Cadastro do Candidato <b>" . $_POST['nome'] . "</b> pelo usuário <b>" . $_SESSION['cpf'] . "</b>";
                         $funcionalidade = "Cadastro de novo candidato";
@@ -181,16 +181,95 @@ function Processo($Processo) {
 
                         $inscricao->consultar("COMMIT");
                         $descricao = "Realizado Cadastro do Candidato <b>" . $_POST['nome'] . "</b> pelo usuário <b>" . $_POST['cpf'];
-                                $pg = "view/candidatos/ficha.php?&id=" . $idinscricao;
+                        $pg = "view/candidatos/ficha.php?&id=" . $idinscricao;
                         //$pg= base64_encode($pg);
                         echo"<script>window.open('" . $pg . "');</script>";
                         //$pg = "default.php?pg=" . base64_encode('view/publico/incluir.php') . "&form=" . base64_encode('Painel');
 
-                        $pg ='index.php';
+                        $pg = 'index.php';
 
                         $util->msgbox("Registro salvo com sucesso!");
                         $util->redirecionamentopage($pg);
                     }
+                } catch (Exception $ex) {
+                    $inscricao->consultar("ROLLBACK");
+                    $util->msgbox("Falha de operacao");
+                }
+            }
+            break;
+
+        case 'editarPublico':
+
+            $util = new Util();
+            $ocorrencias = new Ocorrencias();
+            $inscricao = new Inscricao();
+            $usuarios = new Usuarios();
+            $titulacao = new Titulacao();
+            $experiencia = new Experiencia();
+            global $linha;
+            global $rs;
+            global $linha2;
+            global $rs2;
+            global $linha3;
+            global $rs3;
+            global $linhaEditar;
+            global $rsEditar;
+
+            if ($_GET['cadastro'] == 0) {
+
+                $util->Seguranca($_SESSION['idusuarios'], '../index.php');
+            }
+
+            $inscricao->consultar("select * from cargos order by descricao;");
+            $linha = $inscricao->Linha;
+            $rs = $inscricao->Result;
+
+
+            $inscricao->consultar("select * from titulacao order by idtitulacao;");
+            $linha2 = $inscricao->Linha;
+            $rs2 = $inscricao->Result;
+
+
+            $inscricao->consultar("select * from experiencia order by descricao;");
+            $linha3 = $inscricao->Linha;
+            $rs3 = $inscricao->Result;
+
+            $inscricao->consultar("select *, date_format(nascimento, '%d/%m/%Y') as dtnasc, date_format(data_expedicao, '%d/%m/%Y') as data_exp,  date_format(i.dtreg, '%d/%m/%Y %H:%i:%s') as dtinscricao from inscricao i INNER join usuarios u on(i.idusuarios=u.idusuarios) 
+inner join cargos c on(i.idcargos = c.idcargos)
+inner join titulacao t on(i.idtitulacao=t.idtitulacao) 
+inner JOIN experiencia e on(i.idexperiencia=e.idexperiencia)
+where i.idinscricao=" . $_GET['id']);
+            $linhaEditar = $inscricao->Linha;
+            $rsEditar = $inscricao->Result;
+
+
+            if ($_POST['ok'] == 'true') {
+                try {
+
+                    $pontos = 0;
+                    $inscricao->consultar("BEGIN");
+
+                    $pontos+=$titulacao->obterPontos($_POST['idtitulacao']);
+                    $pontos+=$experiencia->obterPontos($_POST['idexperiencia']);
+
+                    $idusuarios = mysql_result($rsEditar, 0, 'i.idusuarios');
+                    $idinscricao = mysql_result($rsEditar, 0, 'i.idinscricao');
+
+                    $inscricao->alterar($idinscricao, $_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), $_POST['nome'], $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), $_POST['endereco'], $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['municipio'], $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], $_POST['email'], $_POST['idcargos'], $_POST['idexperiencia'], $_POST['idtitulacao'], $idusuarios, $pontos);
+
+                    $descricao = "Realizada a Atualização do Candidato <b>" . $_POST['nome'] . "</b> pelo usuário <b>" . $_SESSION['cpf'] . "</b>";
+                    $funcionalidade = "Cadastro de novo candidato";
+                    $ocorrencias->Incluir($_SESSION['idusuarios'], utf8_decode($descricao), utf8_decode($funcionalidade));
+
+                    $inscricao->consultar("COMMIT");
+
+                    $pg = "view/candidatos/ficha.php?&id=" . $idinscricao;
+                    echo"<script>window.open('" . $pg . "');</script>";
+
+                    $pg = "default.php?pg=" . base64_encode('view/publico/incluir.php') . "&form=" . base64_encode('Painel');
+
+                    $util->msgbox("Registro salvo com sucesso!");
+                    $util->redirecionamentopage($pg);
                 } catch (Exception $ex) {
                     $inscricao->consultar("ROLLBACK");
                     $util->msgbox("Falha de operacao");

@@ -55,22 +55,24 @@ Processo('editarPublico');
 						</div>
 						<div class="row-fluid"><!-- fim col -->
              </div><!-- fim ROW -->
-                        </div>
+           </div>
                    
 			       
 					<div class="form-group">							
 						<div class="row-fluid">
-							<div class="col-md-4">    
-							  <label class=" control-label" for="textinput"> CPF:</label> <input name="cpf" type="text"/  class="form-control" id="cpf"  title="O campo cpf é obrigatório" value="<?php echo $_POST['cpf']?>" maxlength="11"><br />				
-							</div>
-                            <div class="col-md-4">    
-									 <label class=" control-label" for="textinput"> RG:</label> <input type="text" name="rg" id="rg"  title="O campo rg é obrigatório" value="<?php echo $_POST['rg']?>"/  class="form-control"><br />				
-							</div>
+						  <div class="col-md-4">
+						    <label class=" control-label" for="textinput2"> CPF:</label>
+						    <input name="cpf" type="text"/  class="form-control" id="cpf"  title="O campo cpf é obrigatório" value="<?php echo mysql_result($rsEditar,0,'u.cpf');?>" maxlength="11" disabled>
+						    <br />
+					      </div>
+						  <div class="col-md-4">    
+						    <label class=" control-label" for="textinput"> RG:</label> <input type="text" name="rg" id="rg"  title="O campo rg é obrigatório" value="<?php echo mysql_result($rsEditar,0,'i.rg');?>"  class="form-control" /><br />				
+						  </div>
                             <div class="col-md-3" >	
 									
 									<label class="control-label" for="textinput">DATA DE EXPEDIÇÃO: </label>									
 									<div class='input-group date' id='datepicker'>
-										<input name="data_expedicao" type="text" class="form-control" id="data_expedicao" onKeyPress="return Mascaras_Format(document.form,'data_expedicao','99/99/9999',event);" size="20" maxlength="10" onBlur="return valida_data1(document.form.data_expedicao,5);" value="<?php echo $_POST['data_expedicao']; ?>"  title="O campo data de expedição é obrigatório" />
+									  <input name="data_expedicao" type="text" class="form-control" id="data_expedicao" onKeyPress="return Mascaras_Format(document.form,'data_expedicao','99/99/9999',event);" size="20" maxlength="10" onBlur="return valida_data1(document.form.data_expedicao,5);" value="<?php echo mysql_result($rsEditar,0,'data_exp');?>"  title="O campo data de expedição é obrigatório" />
 										<span class="input-group-addon">
 											<span class="glyphicon glyphicon-calendar"></span>
 										</span>
@@ -78,15 +80,15 @@ Processo('editarPublico');
 									
 						  </div>
 							<div class="col-md-8">	
-									<label class=" control-label" for="textinput"> NOME COMPLETO:</label> <input name="nome" type="text"  id="nome" placeholder="" value="<?php echo $_POST['nome']?>"/   class="form-control"><br />
+									<label class=" control-label" for="textinput"> NOME COMPLETO:</label> <input name="nome" type="text"  id="nome" placeholder="" value="<?php echo mysql_result($rsEditar,0,'i.nome');?>"   class="form-control" /><br />
 							</div>							
-						</div>
+					  </div>
 						<div class="row-fluid">
 							<div class="col-md-3" >	
 									
 									<label class="control-label" for="textinput">NASCIMENTO: </label>									
 									<div class='input-group date' id='datepicker'>
-										<input name="nascimento" type="text" class="form-control" id="nascimento" onKeyPress="return Mascaras_Format(document.form,'nascimento','99/99/9999',event);" size="20" maxlength="10" onBlur="return valida_data1(document.form.nascimento,5);" value="<?php echo $_POST['nascimento']; ?>"  title="O campo nascimento é obrigatório" />
+									  <input name="nascimento" type="text" class="form-control" id="nascimento" onKeyPress="return Mascaras_Format(document.form,'nascimento','99/99/9999',event);" size="20" maxlength="10" onBlur="return valida_data1(document.form.nascimento,5);" value="<?php echo mysql_result($rsEditar,0,'dtnasc');?>"  title="O campo nascimento é obrigatório" />
 										<span class="input-group-addon">
 											<span class="glyphicon glyphicon-calendar"></span>
 										</span>
@@ -106,47 +108,75 @@ Processo('editarPublico');
 						<div class="row-fluid">
 							<div class="col-md-4" >	 
 									<label class="control-label" for="textinput">ENDEREÇO: </label>
-									<input name="endereco" type="text" class="form-control" id="endereco" placeholder="" value="<?php echo $_POST['endereco']?>"/>
+							  <input name="endereco" type="text" class="form-control" id="endereco" placeholder="" value="<?php echo mysql_result($rsEditar,0,'i.endereco');?>"/>
 							</div>
                             <div class="col-md-3" >	 
 									<label class="control-label" for="textinput">NÚMERO: </label>
-									<input name="numero" type="text" class="form-control" id="numero" placeholder="" value="<?php echo $_POST['numero']?>"/>
+							  <input name="numero" type="text" class="form-control" id="numero" placeholder="" value="<?php echo mysql_result($rsEditar,0,'i.numero');?>"/>
                             </div>
                             <div class="col-md-4" >	 
 									<label class="control-label" for="textinput">COMPLEMENTO: </label>
-									<input name="complemento" type="text" class="form-control" id="complemento" placeholder="" value="<?php echo $_POST['complemento']?>" />
+							  <input name="complemento" type="text" class="form-control" id="complemento" placeholder="" value="<?php echo mysql_result($rsEditar,0,'i.complemento');?>" />
                             </div>                            							
 						</div>
 						<div class="row-fluid">
 							<div class="col-md-3" >	 
 									<label class="control-label" for="textinput">BAIRRO: </label>
-									<input name="bairro" type="text" class="form-control" id="bairro" placeholder=""  value="<?php echo $_POST['bairro']?>" />
+							  <input name="bairro" type="text" class="form-control" id="bairro" placeholder=""  value="<?php echo mysql_result($rsEditar,0,'i.bairro');?>" />
 							</div>
                           <div class="col-md-3" >	 
 							<label class="control-label" for="textinput">MUNICÍPIO: </label>
-								  <input name="municipio" type="text" class="form-control" id="municipio" placeholder="" value="<?php echo $_POST['municipio']?>" />
-                            </div>
-                            <div class="col-md-3" >	 
-									<label class="control-label" for="textinput">UF: </label>
-									<input name="uf" type="text" class="form-control" id="uf" placeholder="" value="<?php echo $_POST['uf']?>"/>
+						    <input name="municipio" type="text" class="form-control" id="municipio" placeholder="" value="<?php echo mysql_result($rsEditar,0,'i.municipio');?>" />
+                          </div>
+                          <div class="col-md-3" >	 
+							<label class="control-label" for="textinput">UF: </label>
+							<select name='uf'class="form-control" id="uf"><option value=""></option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+						    </select>
                             </div>
                             <div class="col-md-3" >	 
 									<label class="control-label" for="textinput">CEP: </label>
-									<input name="cep" type="text" class="form-control" id="cep"  title="O campo cep é obrigatório" onKeyPress="return Mascaras_Format(document.form,'cep','99999999',event);" value="<?php echo $_POST['cep']; ?>" maxlength="8" placeholder=""/>
+							  <input name="cep" type="text" class="form-control" id="cep"  title="O campo cep é obrigatório" onKeyPress="return Mascaras_Format(document.form,'cep','99999999',event);" value="<?php echo mysql_result($rsEditar,0,'i.cep');?>" maxlength="8" placeholder=""/>
                             </div>							
 						</div>
 						<div class="row-fluid">
 							<div class="col-md-4" >	 
 									<label class="control-label" for="textinput">TEL.: </label>
-									<input name="telefone" type="text" class="form-control" id="telefone" title="Campo telefone é obrigatório" onKeyPress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo $_POST['telefone']; ?>" maxlength="15" placeholder="" />
+							  <input name="telefone" type="text" class="form-control" id="telefone" title="Campo telefone é obrigatório" onKeyPress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo mysql_result($rsEditar,0,'i.telefone');?>" maxlength="15" placeholder="" />
 							</div>
                             <div class="col-md-4" >	 
 									<label class="control-label" for="textinput">CEL.: </label>
-									<input name="celular" type="text" class="form-control" id="celular" title="Campo celular &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'celular','(99) 99999-9999',event);" value="<?php echo $_POST['celular']; ?>" maxlength="15" placeholder="" />
+							  <input name="celular" type="text" class="form-control" id="celular" title="Campo celular &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'celular','(99) 99999-9999',event);" value="<?php echo mysql_result($rsEditar,0,'i.celular');?>" maxlength="15" placeholder="" />
                             </div>
                             <div class="col-md-4" >	 
 									<label class="control-label" for="textinput">EMAIL: </label>
-									<input name="email" type="text" class="form-control" id="email" placeholder="" data-rule-email="true" data-rule-required="true" value="<?php echo $_POST['email']; ?>"  title="O campo e-mail é obrigatório"/>
+							  <input name="email" type="text" class="form-control" id="email" placeholder="" data-rule-email="true" data-rule-required="true" value="<?php echo mysql_result($rsEditar,0,'i.email');?>"  title="O campo e-mail é obrigatório"/>
                             </div>							
 						</div>
                         <div class="col-md-6">
@@ -194,26 +224,17 @@ Processo('editarPublico');
 					</div>
            <!-- FILIAÇÃO -->
                     
-                    <center>									   
-						<h3><legend>SENHA DE ACESSO PARA IMPRIMIR / EDITAR</legend>
-						</h3>
-					</center> 
-					<div class="form-group">							
-						<div class="row-fluid">
-						  <div class="col-md-4">	
-						    <label class=" control-label" for="textinput"> SENHA DE ACESSO:</label>
-						    <input name="senha" type="password" class="form-control" id="senha" placeholder="" data-rule-email="true" data-rule-required="true" value="<?php echo $_POST['senha']; ?>"  title="O campo senha é obrigatório"/>
-						    <br />
-							</div>							
-						</div>						
-					</div>
-					<div class="form-group">
+           <center>									   
+						<h3><legend></legend>
+			   </h3>
+                    </center>
+           <div class="form-group">
 							<div style="text-align: center;">
 							    <button type="button" class="btn btn-primary" onClick="validar(document.form);">
                                     </i> SALVAR</button>
                                     <button type="button" class="btn" onClick="javascript:history.back()" >CANCELAR</button>
                                     <input name="ok" type="hidden" id="ok"/>
-					</div>					
+		   </div>					
 					
 			 
 		 </form>
@@ -222,15 +243,14 @@ Processo('editarPublico');
         
         
 <script>
-document.form.idtipo_segmento.value='<?php echo $_POST['idtipo_segmento']?>';
-document.form.idsegmento_escolar.value='<?php echo $_POST['idsegmento_escolar']?>';
-document.form.sexo.value='<?php echo $_POST['sexo']?>';
+document.form.sexo.value='<?php echo mysql_result($rsEditar,0,'i.sexo');?>';
+document.form.uf.value='<?php echo mysql_result($rsEditar,0,'i.uf');?>';
 var sprypassword1 = new Spry.Widget.ValidationPassword("sprypassword1");
 </script>
  <script>
- document.form.idcargos.value='<?php echo $_POST['idcargos'];?>';
- document.form.idtitulacao.value='<?php echo $_POST['idtitulacao'];?>';
- document.form.idexperiencia.value='<?php echo $_POST['idexperiencia'];?>';
+ document.form.idcargos.value='<?php echo mysql_result($rsEditar,0,'i.idcargos');?>';
+ document.form.idtitulacao.value='<?php echo mysql_result($rsEditar,0,'i.idtitulacao');?>';
+ document.form.idexperiencia.value='<?php echo mysql_result($rsEditar,0,'i.idexperiencia');?>';
  </script>
 
         <script src="js/bootstrap-datepicker.min.js"></script><!---->

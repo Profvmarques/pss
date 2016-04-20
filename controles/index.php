@@ -55,9 +55,8 @@ function Processo($Processo) {
 
                     if ($_SESSION['idperfil'] == 2) {
 
-                        $pg = "default.php?pg=" . base64_encode('view/publico/incluir3.php') . "&form=" . base64_encode('Painel');
+                        $pg = "default.php?pg=" . base64_encode('view/publico/incluirGestao.php') . "&form=" . base64_encode('Painel');
                     }
-
                  
 
                     $util->redirecionamentopage($pg);

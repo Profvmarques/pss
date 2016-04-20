@@ -22,6 +22,7 @@ class Inscricao {
     private $sexo;
     private $nascimento;
     private $endereco;
+    private $numero;
     private $bairro;
     private $municipio;
     private $uf;
@@ -37,9 +38,9 @@ class Inscricao {
 
    //Método
 
-    public function Incluir($rg,$data_expedicao,$nome,$sexo,$nascimento,$endereco,$complemento, $bairro, $municipio, $uf, $cep,$telefone,$celular,$email,$idcargos, $idexperiencia, $idtitulacao,$idusuarios,$pontos) {
+    public function Incluir($rg,$data_expedicao,$nome,$sexo,$nascimento,$endereco,$numero,$complemento, $bairro, $municipio, $uf, $cep,$telefone,$celular,$email,$idcargos, $idexperiencia, $idtitulacao,$idusuarios,$pontos) {
 
-       $insert = 'insert into inscricao(rg, data_expedicao,nome,sexo,nascimento,endereco,complemento, bairro, municipio, uf, cep,telefone,celular,email,idcargos, idexperiencia, idtitulacao,idusuarios, pontos,dtreg) values("'.$rg.'","'.$data_expedicao.'","'.$nome.'","'.$sexo.'","'.$nascimento.'","'.$endereco.'","'.$complemento.'","'.$bairro.'","'.$municipio.'","'.$uf.'","'.$cep.'","'.$telefone.'","'.$celular.'","'.$email.'","'.$idcargos.'","'.$idexperiencia.'","'.$idtitulacao.'","'.$idusuarios.'","'.$pontos.'","'.date('Y-m-d H:i:s').'")';
+       $insert = 'insert into inscricao(rg, data_expedicao,nome,sexo,nascimento,endereco,numero,complemento, bairro, municipio, uf, cep,telefone,celular,email,idcargos, idexperiencia, idtitulacao,idusuarios, pontos,dtreg) values("'.$rg.'","'.$data_expedicao.'","'.$nome.'","'.$sexo.'","'.$nascimento.'","'.$endereco.'","'.$numero.'","'.$complemento.'","'.$bairro.'","'.$municipio.'","'.$uf.'","'.$cep.'","'.$telefone.'","'.$celular.'","'.$email.'","'.$idcargos.'","'.$idexperiencia.'","'.$idtitulacao.'","'.$idusuarios.'","'.$pontos.'","'.date('Y-m-d H:i:s').'")';
 
         $Acesso = new Acesso();
         $Acesso->Conexao();
@@ -81,12 +82,11 @@ class Inscricao {
 
        //Editar
 
-    public function Alterar($idinscricao, $cpf, $nome,$sexo,$nascimento,$endereco, $bairro, $municipio, $uf, $cep,$idcargos, $idexperiencia, $idtitulacao,$idusuarios){
+    public function alterar($idinscricao,$rg,$data_expedicao,$nome,$sexo,$nascimento,$endereco,$numero,$complemento, $bairro, $municipio, $uf, $cep,$telefone,$celular,$email,$idcargos, $idexperiencia, $idtitulacao,$idusuarios,$pontos) {
 
-      $update = 'update inscricao set cpf="'.$cpf.'", nome="'.$nome.'",sexo="'.$sexo.'",
-
-            nascimento="'.$nascimento.'", endereco="'.$endereco.'",municipio="'.$municipio.'",uf="'.$uf.'",cep="'.$cep.'",idcargos="'.$idcargos.'",idexperiencia="'.$idexperiencia.'",idtitulacao="'.$idtitulacao.'",idusuarios="'.$idusuarios.'" 
-			where idinscricao="'.$idinscricao.'"'; 
+       $update = 'update inscricao set rg="'.$rg.'",data_expedicao="'.$data_expedicao.'", nome="'.$nome.'",sexo="'.$sexo.'",
+                      nascimento="'.$nascimento.'", endereco="'.$endereco.'",numero="'.$numero.'",complemento="'.$complemento.'",bairro="'.$bairro.'",municipio="'.$municipio.'",uf="'.$uf.'",cep="'.$cep.'",telefone="'.$telefone.'",celular="'.$celular.'",email="'.$email.'",idcargos="'.$idcargos.'",idexperiencia="'.$idexperiencia.'",idtitulacao="'.$idtitulacao.'",idusuarios="'.$idusuarios.'",pontos="'.$pontos.'" 
+			where idinscricao="'.$idinscricao.'"';
 
         $Acesso = new Acesso();
 

@@ -106,9 +106,7 @@ $html = ob_get_clean();
 	 
 
 	$mpdf = new mPDF();
-
 	// cria o objeto
-
 	 
 
 	$mpdf->allow_charset_conversion=true;
@@ -126,13 +124,11 @@ $html = ob_get_clean();
 	 
 
 	$mpdf->WriteHTML($html);
-
 	// escreve definitivamente o conteudo no PDF
 
 	 
 
-	$mpdf->Output();
-
+	$mpdf->Output('ficha.pdf', 'D');
 	// imprime
 
 	 
