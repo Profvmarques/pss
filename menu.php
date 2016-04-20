@@ -169,10 +169,10 @@ if ($_SESSION['idperfil']==2){
                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Cadastros <b class="caret"></b></a>
                     
                <ul role="menu" class="dropdown-menu">
-                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Cargos</a></li>
-                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Experiencia</a></li>
-                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Titulação</a></li>
-                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Usuários</a></li>                                                  
+                <li><a href="default.php?pg=dmlldy9jYXJnb3MvaW5jbHVpci5waHA=﻿﻿﻿&form=Q2FkYXN0cm8gZGUgQ2FyZ29z﻿﻿﻿">Cargos</a></li>
+                <li><a href="default.php?pg=dmlldy9leHBlcmllbmNpYS9pbmNsdWlyLnBocA==&form=Q2FkYXN0cm8gZGUgRXhwZXJpw6puY2lh﻿﻿﻿">Experiencia</a></li>
+                <li><a href="default.php?pg=dmlldy90aXR1bGFjYW8vaW5jbHVpci5waHA=&form=Q2FkYXN0cm8gZGUgVGl0dWxhw6fDo28=﻿﻿﻿">Titulação</a></li>
+                <li><a href="default.php?pg=dmlldy91c3Vhcmlvcy9pbmNsdWlyLnBocA==&form=Q2FkYXN0cm8gZGUgVXN1YXJpb3M=">Usuários</a></li>                                                  
                                                           </ul>
                 </li>
                 

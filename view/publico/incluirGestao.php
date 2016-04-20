@@ -1,21 +1,10 @@
 <?php
-
-
-
+echo base64_encode('Cadastro de Titulação');
 require_once('controles/publico.php');
-
-
-
 Processo('publicoGestao');
+?>   
 
-
-
-?>
-
-   
-
-       <meta content="text/html;  charset=UTF-8" http-equiv="content-type">
-
+<meta content="text/html;  charset=UTF-8" http-equiv="content-type">
   
 
 		<title>FORMULÁRIO</title>

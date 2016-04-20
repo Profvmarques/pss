@@ -1,23 +1,17 @@
 <?php
 
 require_once('conexao.php');
-
 require_once('logs.php');
-
 
 
 class Cargos {
 
 
-
     //Atributos da classe
 
     private $idcargos;
-
     private $descricao;
-
     private $ch;
-
     private $dtreg;
 
     //Método
