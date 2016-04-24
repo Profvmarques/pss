@@ -184,7 +184,16 @@ function MM_swapImage() { //v3.0
                                 <div class="row-fluid centered">
 
                                 <div class="centered">
+<table width="292">
+  <tr>
+    <td><strong>Total de inscritos até o momento: <?php echo mysql_result($rs4,0,'total');?></strong></td>
+  </tr>
+  <tr>
+    <td><a href="view/relatorios/listaGeralPontuada.php" target="_blank">Relatório</a></td>
+  </tr>
+</table>
 
+<br /><br />
                                 <div class="col-md-6">
 
                                 
