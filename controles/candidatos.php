@@ -1,7 +1,5 @@
 ﻿<?php
-
 session_start();
-
 require_once('classes/ocorrencias.php');
 require_once('classes/candidatos.php');
 require_once('classes/vagas.php');

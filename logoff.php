@@ -1,4 +1,4 @@
-<?php
-require_once("controles/index.php");
-Processo('logoff');
-?>
+<?php
+require_once("controles/index.php");
+Processo('logoff');
+?>

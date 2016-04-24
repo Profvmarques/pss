@@ -1,19 +1,7 @@
 <?php
-
-
-
 require_once('controles/publico.php');
-
-
-
 Processo('publicoGestao');
-
-
-
 ?>
-
-   
-
        <meta content="text/html;  charset=UTF-8" http-equiv="content-type">
 
   

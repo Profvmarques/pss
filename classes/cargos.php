@@ -1,10 +1,13 @@
 <?php
 
 require_once('conexao.php');
+
 require_once('logs.php');
 
 
+
 class Cargos {
+
 
 
     //Atributos da classe
@@ -12,13 +15,15 @@ class Cargos {
     private $idcargos;
     private $descricao;
     private $ch;
+    private $remuneracao;
+    private $requisito;
     private $dtreg;
 
     //Método
 
-    public function incluir($descricao,$ch) {
+    public function incluir($descricao,$ch,$remuneracao,$requisito) {
 
-        $insert = 'insert into cargos(descricao,ch,dtreg) values("'.$descricao.'","'.$ch.'","'.date('Y-m-d H:i:s').'")';
+        $insert = 'insert into cargos(descricao,ch,remuneracao,requisito,dtreg) values("'.$descricao.'","'.$ch.'","'.$remuneracao.'","'.$requisito.'","'.date('Y-m-d H:i:s').'")';
 
         $Acesso = new Acesso();
 
@@ -30,7 +35,7 @@ class Cargos {
 
         $Logs = new Logs();
 
-        $Logs->Incluir($_SESSION['idusuarios'], $insert, 'eventos', 'Inserir');
+        $Logs->Incluir($_SESSION['idusuarios'], $insert, 'cargos', 'Inserir');
 
     }
 
@@ -62,9 +67,9 @@ class Cargos {
 
        //Editar
 
-    public function alterar($idcargos,$descricao,$ch){
+    public function alterar($idcargos,$descricao,$ch,$remuneracao,$requisito){
 
-        $update = 'update cargos set descricao="'.$descricao.'",ch="'.$ch.'" where idcargos="'.$idcargos.'"';
+        $update = 'update cargos set descricao="'.$descricao.'",ch="'.$ch.'",remuneracao="'.$remuneracao.'",requisito="'.$requisito.'" where idcargos="'.$idcargos.'"';
 
         $Acesso = new Acesso();
 
@@ -74,7 +79,7 @@ class Cargos {
 
         $Logs = new Logs();
 
-        $Logs->Incluir($_SESSION['idusuarios'], $update, 'eventos', 'Alterar');
+        $Logs->Incluir($_SESSION['idusuarios'], $update, 'cargos', 'Alterar');
 
     }
 

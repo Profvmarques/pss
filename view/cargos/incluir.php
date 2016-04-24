@@ -35,13 +35,17 @@ Processo('incluir');
 
     <tr>
       <td>CARGA HOR&Aacute;RIA</td>
-      <td><input name="ch" type="text" class="input-xlarge" id="ch" placeholder="" title="O campo evento &eacute; obrigat&oacute;rio"/></td>
+      <td><input name="ch" type="text" class="input-xlarge" id="ch" placeholder="" title="O campo carga horária &eacute; obrigat&oacute;rio"/></td>
+    </tr>
+    <tr>
+      <td>REMUNERA&Ccedil;&Atilde;O</td>
+      <td><input name="remuneracao" type="text" class="input-xlarge" id="remuneracao" placeholder="" title="O campo remuneração &eacute; obrigat&oacute;rio"/></td>
     </tr>
     <tr>
 
-      <td>&nbsp;</td>
+      <td>REQUISITO</td>
 
-      <td>&nbsp;</td>
+      <td><textarea name="requisito" rows="5" class="input-xlarge" id="requisito" placeholder="" title="O campo remunera&ccedil;&atilde;o &eacute; obrigat&oacute;rio"></textarea></td>
 
     </tr>
 

@@ -1,564 +1,564 @@
-﻿<?xml version="1.0" standalone="yes"?>
-<ew-language date="2014/11/26" version="7.0.0" id="en" name="English" desc="English" author="e.World Technology Ltd.">
-	<locale>
-		<phrase id="locale" value=""/><!-- *** system locale for this language -->
-		<phrase id="use_system_locale" value="1"/><!-- *** change to "0" to disable system locale and use the following settings *** -->
-		<phrase id="decimal_point" value="."/>
-		<phrase id="thousands_sep" value=","/>
-		<phrase id="mon_decimal_point" value="."/>
-		<phrase id="mon_thousands_sep" value=","/>
-		<phrase id="currency_symbol" value="$"/>
-		<phrase id="positive_sign" value=""/>
-		<phrase id="negative_sign" value="-"/>
-		<phrase id="frac_digits" value="2"/>
-		<phrase id="p_cs_precedes" value="1"/>
-		<phrase id="p_sep_by_space" value="0"/>
-		<phrase id="n_cs_precedes" value="1"/>
-		<phrase id="n_sep_by_space" value="0"/>
-		<phrase id="p_sign_posn" value="3"/>
-		<phrase id="n_sign_posn" value="3"/>
-		<phrase id="time_zone" value="US/Pacific"/><!-- *** used for multi-language site only *** -->
-	</locale>
-	<global>
-		<phrase id="allrecords" value="All"/>
-		<phrase id="alwaysask" value="Always ask for my user name and password"/>
-		<phrase id="autologin" value="Auto login until I logout explicitly"/>
-		<phrase id="backtologin" value="Back to Login Page"/>
-		<phrase id="booleanno" value="No"/>
-		<phrase id="booleanyes" value="Yes"/>
-		<phrase id="breadcrumbdivider" value="/"/>
-		<phrase id="browsernoflashsupport" value="Your browser does not support Flash player." client="1"/>
-		<phrase id="buttonexport" value="Export"/>
-		<phrase id="cancelbtn" value="Cancel" client="1"/>
-		<phrase id="chartorder" value="Order by"/>
-		<phrase id="chartorderxasc" value="Labels ASC"/>
-		<phrase id="chartorderxdesc" value="Labels DESC"/>
-		<phrase id="chartorderyasc" value="Values ASC"/>
-		<phrase id="chartorderydesc" value="Values DESC"/>
-		<phrase id="clicktodrilldown" value="Click to drill down"/>
-		<phrase id="currentfilters" value="Current filters:"/>
-		<phrase id="drilldownallrecords" value="All records"/>
-		<phrase id="drilldownfilters" value="Drill down filters:"/>
-		<phrase id="entersenderemail" value="Please enter sender email" client="1"/>
-		<phrase id="enterpropersenderemail" value="Exceed maximum sender email count or email address incorrect" client="1"/>
-		<phrase id="enterrecipientemail" value="Please enter recipient email" client="1"/>
-		<phrase id="enterproperrecipientemail" value="Exceed maximum recipient email count or email address incorrect" client="1"/>
-		<phrase id="enterproperccemail" value="Exceed maximum cc email count or email address incorrect" client="1"/>
-		<phrase id="enterproperbccemail" value="Exceed maximum bcc email count or email address incorrect" client="1"/>
-		<phrase id="entersubject" value="Please enter subject" client="1"/>
-		<phrase id="emailformsender" value="From"/>
-		<phrase id="emailformrecipient" value="To"/>
-		<phrase id="emailformcc" value="Cc"/>
-		<phrase id="emailformbcc" value="Bcc"/>
-		<phrase id="emailformsubject" value="Subject"/>
-		<phrase id="emailformmessage" value="Message"/>
-		<phrase id="emailformcontenttype" value="Send as"/>
-		<phrase id="emailformcontenttypeurl" value="URL"/>
-		<phrase id="emailformcontenttypehtml" value="HTML"/>
-		<phrase id="emptylabel" value="(Empty)"/>
-		<phrase id="enterpassword" value="Please enter password" client="1"/>
-		<phrase id="enterpwd" value="Please enter password" client="1"/>
-		<phrase id="entersearchcriteria" value="Please enter search criteria"/>
-		<phrase id="enteruid" value="Please enter user ID" client="1"/>
-		<phrase id="entervalidatecode" value="Please enter the validation code shown" client="1"/>
-		<phrase id="exceedmaxemailexport" value="Exceed maximum export email count. Please try again later."/>
-		<phrase id="exportchart" value="Exporting chart: " client="1"/>
-		<phrase id="exportchartdata" value="Exporting chart data" client="1"/>
-		<phrase id="exportcharterror" value="Failed to export chart: " client="1"/>
-		<phrase id="exportingchart" value="Exporting chart (%c of %t), please wait..." client="1"/>
-		<phrase id="exporttoemail" value="Email" imageurl="phprptimages/exportemail.gif" client="1" imagewidth="16" imageheight="16"/>
-		<phrase id="exporttoemailtext" value="Email"/>
-		<phrase id="exporttoexcel" value="Export to Excel" imageurl="phprptimages/exportxls.gif" imagewidth="16" imageheight="16"/>
-		<phrase id="exporttoexceltext" value="Export to Excel"/>
-		<phrase id="exporttopdf" value="Export to PDF" imageurl="phprptimages/exportpdf.gif" imagewidth="16" imageheight="16"/>
-		<phrase id="exporttopdftext" value="Export to PDF"/>
-		<phrase id="exporttoword" value="Export to Word" imageurl="phprptimages/exportdoc.gif" imagewidth="16" imageheight="16"/>
-		<phrase id="exporttowordtext" value="Export to Word"/>
-		<phrase id="fieldrequiredindicator" value="&lt;span class=&quot;ewRequired&quot;&gt;&amp;nbsp;*&lt;/span&gt;"/>
-		<phrase id="filters" value="Filters"/>
-		<phrase id="homepage" value="Home"/>
-		<phrase id="incorrectcreditcard" value="Incorrect credit card number" client="1"/>
-		<phrase id="incorrectdateymd" value="Incorrect date, format = yyyy%smm%sdd"/>
-		<phrase id="incorrectdatemdy" value="Incorrect date, format = mm%sdd%syyyy"/>
-		<phrase id="incorrectdatedmy" value="Incorrect date, format = dd%smm%syyyy"/>
-		<phrase id="incorrectshortdateymd" value="Incorrect date, format = yy%smm%sdd"/>
-		<phrase id="incorrectshortdatemdy" value="Incorrect date, format = mm%sdd%syy"/>
-		<phrase id="incorrectshortdatedmy" value="Incorrect date, format = dd%smm%syy"/>
-		<phrase id="incorrectemail" value="Incorrect email" client="1"/>
-		<phrase id="incorrectfield" value="Incorrect field" client="1"/>
-		<phrase id="incorrectfloat" value="Incorrect floating point number" client="1"/>
-		<phrase id="incorrectguid" value="Incorrect GUID" client="1"/>
-		<phrase id="incorrectinteger" value="Incorrect integer" client="1"/>
-		<phrase id="incorrectphone" value="Incorrect phone number" client="1"/>
-		<phrase id="incorrectrange" value="Number must be between %1 and %2" client="1"/>
-		<phrase id="incorrectregexp" value="Regular expression not matched" client="1"/>
-		<phrase id="incorrectssn" value="Incorrect Social Security Number" client="1"/>
-		<phrase id="incorrecttime" value="Incorrect time (hh:mm:ss)" client="1"/>
-		<phrase id="incorrectzip" value="Incorrect ZIP code" client="1"/>
-		<phrase id="invaliduidpwd" value="Incorrect user ID or password"/>
-		<phrase id="language" value="Language"/>
-		<phrase id="loading" value="Loading%s..." client="1"/>
-		<phrase id="login" value="Login"/>
-		<phrase id="loginpage" value="Login Page"/>
-		<phrase id="logout" value="Logout"/>
-		<phrase id="messageok" value="OK" client="1"/>
-		<phrase id="mobilemenu" value="Menu"/>
-		<phrase id="monthjan" value="Jan"/>
-		<phrase id="monthfeb" value="Feb"/>
-		<phrase id="monthmar" value="Mar"/>
-		<phrase id="monthapr" value="Apr"/>
-		<phrase id="monthmay" value="May"/>
-		<phrase id="monthjun" value="Jun"/>
-		<phrase id="monthjul" value="Jul"/>
-		<phrase id="monthaug" value="Aug"/>
-		<phrase id="monthsep" value="Sep"/>
-		<phrase id="monthoct" value="Oct"/>
-		<phrase id="monthnov" value="Nov"/>
-		<phrase id="monthdec" value="Dec"/>
-		<phrase id="next" value="Next"/>
-		<phrase id="nopermission" value="You do not have permission to access the page."/>
-		<phrase id="norecord" value="No records found"/>
-		<phrase id="noreportorcharts" value="No report or charts is selected for generation. Please check your report/charts settings."/>
-		<phrase id="nodistinctcolvals" value="No distinct column values for sql: "/>
-		<phrase id="nulllabel" value="(Null)"/>
-		<phrase id="of" value="of"/>
-		<phrase id="page" value="Page"/>
-		<phrase id="pagerfirst" value="First"/>
-		<phrase id="pagerlast" value="Last"/>
-		<phrase id="pagernext" value="Next"/>
-		<phrase id="pagerprevious" value="Previous"/>
-		<phrase id="password" value="Password"/>
-		<phrase id="pleaseselect" value="Please Select"/>
-		<phrase id="popupall" value="(All)" client="1"/>
-		<phrase id="popupcancel" value="Cancel" client="1"/>
-		<phrase id="popupfrom" value="From" client="1"/>
-		<phrase id="popupnovalue" value="No value selected!" client="1"/>
-		<phrase id="popupok" value="  OK  " client="1"/>
-		<phrase id="popupselect" value="Please Select" client="1"/>
-		<phrase id="popupto" value="To" client="1"/>
-		<phrase id="prev" value="Prev"/>
-		<phrase id="printerfriendly" value="Printer Friendly" imageurl="phprptimages/print.gif" imagewidth="16" imageheight="16"/>
-		<phrase id="printerfriendlytext" value="Printer Friendly"/>
-		<phrase id="group" value="Groups"/>
-		<phrase id="groupsperpage" value="Groups per page"/>
-		<phrase id="qtr1" value="1st Quarter"/>
-		<phrase id="qtr2" value="2nd Quarter"/>
-		<phrase id="qtr3" value="3rd Quarter"/>
-		<phrase id="qtr4" value="4th Quarter"/>
-		<phrase id="record" value="Records"/>
-		<phrase id="recordsperpage" value="Records per page"/>
-		<phrase id="report" value="Reports"/>
-		<phrase id="reset" value="Reset"/>
-		<phrase id="resetallfilter" value="&lt;span class=&quot;glyphicon glyphicon-filter&quot;&gt;&lt;/span&gt;&lt;small&gt;&lt;span class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/span&gt;&lt;/small&gt;"/>
-		<phrase id="resetallfiltertext" value="Reset all filters"/>
-		<phrase id="resetsearch" value="Reset search criteria"/>
-		<phrase id="rptavg" value="AVG"/>
-		<phrase id="rptcnt" value="COUNT"/>
-		<phrase id="rptdtlrec" value=" detail records"/>
-		<phrase id="rptgrandsummary" value="Grand Summary"/>
-		<phrase id="rptgrandtotal" value="Grand Total"/>
-		<phrase id="rptmax" value="MAX"/>
-		<phrase id="rptmin" value="MIN"/>
-		<phrase id="rptpagesummary" value="Page Summary"/>
-		<phrase id="rptpagetotal" value="Page Total"/>
-		<phrase id="rptseparator" value=":&amp;nbsp;"/>
-		<phrase id="rptsum" value="SUM"/>
-		<phrase id="rptsumhead" value="Summary for"/>
-		<phrase id="saveusername" value="Save my user name"/>
-		<phrase id="search" value="Search"/>
-		<phrase id="selectall" value="(All)"/>
-		<phrase id="sendemailbtn" value="Send" client="1"/>
-		<phrase id="sendemailsuccess" value="Email sent successfully" client="1"/>
-		<phrase id="showall" value="Show all"/>
-		<phrase id="summary" value="Summary"/>
-		<phrase id="tasks" value="Tasks"/>
-		<phrase id="to" value="to"/>
-		<phrase id="top" value="Top"/>
-		<phrase id="total" value="Total"/>
-		<phrase id="unmatchedvalue" value="&lt;img src=&quot;%fwarn.gif&quot; alt=&quot;Value does not exist&quot; title=&quot;Value does not exist&quot; width=&quot;16&quot; height=&quot;15&quot; style=&quot;border: 0;&quot;&gt;"/>
-		<phrase id="username" value="User name"/>
-		<phrase id="week" value="Week"/>
-		<phrase id="year" value="Year"/>
-		<!-- Search Operators -->
-		<phrase id="=" value="&amp;nbsp;"/>
-		<phrase id="&lt;&gt;" value="&amp;lt;&amp;gt;"/>
-		<phrase id="&lt;" value="&amp;lt;"/>
-		<phrase id="&lt;=" value="&amp;lt;="/>
-		<phrase id="&gt;" value="&amp;gt;"/>
-		<phrase id="&gt;=" value="&amp;gt;="/>
-		<phrase id="like" value="contains"/>
-		<phrase id="not like" value="not contains"/>
-		<phrase id="starts with" value="starts with"/>
-		<phrase id="ends with" value="ends with"/>
-		<phrase id="is null" value="is null"/>
-		<phrase id="is not null" value="is not null"/>
-		<phrase id="between" value="between"/>
-		<phrase id="and" value="and"/>
-		<phrase id="or" value="or"/>
-		<!-- Menu Prefix/Suffix -->
-		<phrase id="simplereportmenuitemprefix" value=""/>
-		<phrase id="simplereportmenuitemsuffix" value=""/>
-		<phrase id="detailsummaryreportmenuitemprefix" value=""/>
-		<phrase id="detailsummaryreportmenuitemsuffix" value=""/>
-		<phrase id="crosstabreportmenuitemprefix" value=""/>
-		<phrase id="crosstabreportmenuitemsuffix" value=""/>
-		<phrase id="chartreportmenuitemprefix" value=""/>
-		<phrase id="chartreportmenuitemsuffix" value=""/>
-		<!-- Advanced Filter -->
-		<phrase id="future" value="Future"/>
-		<phrase id="past" value="Past"/>
-		<phrase id="last14days" value="Last 14 days"/>
-		<phrase id="last30days" value="Last 30 days"/>
-		<phrase id="last7days" value="Last 7 days"/>
-		<phrase id="next14days" value="Next 14 days"/>
-		<phrase id="next30days" value="Next 30 days"/>
-		<phrase id="next7days" value="Next 7 days"/>
-		<phrase id="today" value="Today"/>
-		<phrase id="tomorrow" value="Tomorrow"/>
-		<phrase id="yesterday" value="Yesterday"/>
-		<phrase id="lastmonth" value="Last month"/>
-		<phrase id="nextmonth" value="Next month"/>
-		<phrase id="thismonth" value="This month"/>
-		<phrase id="lasttwoweeks" value="Last two weeks"/>
-		<phrase id="lastweek" value="Last week"/>
-		<phrase id="nexttwoweeks" value="Next two weeks"/>
-		<phrase id="nextweek" value="Next week"/>
-		<phrase id="thisweek" value="This week"/>
-		<phrase id="lastyear" value="Last year"/>
-		<phrase id="nextyear" value="Next year"/>
-		<phrase id="thisyear" value="This year"/>
-	</global>
-	<project><phrase id="footertext" value="&amp;copy;2013 e.World Technology Ltd. All rights reserved."/>
-<menu id="1"><phrase id="menutext" value="candidatos"/>
-</menu>
-<menu id="2"><phrase id="menutext" value="distrito"/>
-</menu>
-<menu id="3"><phrase id="menutext" value="eventos"/>
-</menu>
-<menu id="4"><phrase id="menutext" value="inscricao"/>
-</menu>
-<menu id="5"><phrase id="menutext" value="logradouro"/>
-</menu>
-<menu id="6"><phrase id="menutext" value="logs"/>
-</menu>
-<menu id="7"><phrase id="menutext" value="matricula"/>
-</menu>
-<menu id="8"><phrase id="menutext" value="ocorrencias"/>
-</menu>
-<menu id="9"><phrase id="menutext" value="perfil"/>
-</menu>
-<menu id="10"><phrase id="menutext" value="propostamatricula"/>
-</menu>
-<menu id="11"><phrase id="menutext" value="rendafamiliar"/>
-</menu>
-<menu id="12"><phrase id="menutext" value="segmentoescolar"/>
-</menu>
-<menu id="13"><phrase id="menutext" value="tipoinscricao"/>
-</menu>
-<menu id="14"><phrase id="menutext" value="tiposegmento"/>
-</menu>
-<menu id="15"><phrase id="menutext" value="unidade escolar"/>
-</menu>
-<menu id="16"><phrase id="menutext" value="usuarios"/>
-</menu>
-<menu id="17"><phrase id="menutext" value="vagas"/>
-</menu>
-<menu id="18"><phrase id="menutext" value="Rel Estatistico UE"/>
-</menu>
-<menu id="21"><phrase id="menutext" value="Relatório Estatístico por Unidade Escolar"/>
-</menu>
-<menu id="19"><phrase id="menutext" value="Rel Estatistico Distrito"/>
-</menu>
-<menu id="20"><phrase id="menutext" value="Relatório Estatístico por Distrito"/>
-</menu>
-<table id="candidatos"><phrase id="tblcaption" value="candidatos"/>
-<field id="idcandidatos"><phrase id="fldcaption" value="idcandidatos"/>
-</field>
-<field id="nome"><phrase id="fldcaption" value="nome"/>
-</field>
-<field id="pai"><phrase id="fldcaption" value="pai"/>
-</field>
-<field id="mae"><phrase id="fldcaption" value="mae"/>
-</field>
-<field id="nascimento"><phrase id="fldcaption" value="nascimento"/>
-</field>
-<field id="idade"><phrase id="fldcaption" value="idade"/>
-</field>
-<field id="sexo"><phrase id="fldcaption" value="sexo"/>
-</field>
-<field id="endereco"><phrase id="fldcaption" value="endereco"/>
-</field>
-<field id="numero"><phrase id="fldcaption" value="numero"/>
-</field>
-<field id="complemento"><phrase id="fldcaption" value="complemento"/>
-</field>
-<field id="bairro"><phrase id="fldcaption" value="bairro"/>
-</field>
-<field id="cidade"><phrase id="fldcaption" value="cidade"/>
-</field>
-<field id="uf"><phrase id="fldcaption" value="uf"/>
-</field>
-<field id="cep"><phrase id="fldcaption" value="cep"/>
-</field>
-<field id="telefone"><phrase id="fldcaption" value="telefone"/>
-</field>
-<field id="celular"><phrase id="fldcaption" value="celular"/>
-</field>
-<field id="idrendafamiliar"><phrase id="fldcaption" value="idrendafamiliar"/>
-</field>
-<field id="num_irmaos"><phrase id="fldcaption" value="num irmaos"/>
-</field>
-<field id="responsavel"><phrase id="fldcaption" value="responsavel"/>
-</field>
-<field id="cpf"><phrase id="fldcaption" value="cpf"/>
-</field>
-<field id="rg"><phrase id="fldcaption" value="rg"/>
-</field>
-<field id="_email"><phrase id="fldcaption" value="email"/>
-</field>
-<field id="auditiva"><phrase id="fldcaption" value="auditiva"/>
-</field>
-<field id="visual"><phrase id="fldcaption" value="visual"/>
-</field>
-<field id="motora"><phrase id="fldcaption" value="motora"/>
-</field>
-<field id="intelectual"><phrase id="fldcaption" value="intelectual"/>
-</field>
-<field id="multipla"><phrase id="fldcaption" value="multipla"/>
-</field>
-<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
-</field>
-</table>
-<table id="distrito"><phrase id="tblcaption" value="distrito"/>
-<field id="iddistrito"><phrase id="fldcaption" value="iddistrito"/>
-</field>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-</table>
-<table id="eventos"><phrase id="tblcaption" value="eventos"/>
-<field id="ideventos"><phrase id="fldcaption" value="ideventos"/>
-</field>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-<field id="data_inicio"><phrase id="fldcaption" value="data inicio"/>
-</field>
-<field id="data_termino"><phrase id="fldcaption" value="data termino"/>
-</field>
-<field id="situacao"><phrase id="fldcaption" value="situacao"/>
-</field>
-<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
-</field>
-</table>
-<table id="inscricao"><phrase id="tblcaption" value="inscricao"/>
-<field id="idinscricao"><phrase id="fldcaption" value="idinscricao"/>
-</field>
-<field id="idusuarios"><phrase id="fldcaption" value="idusuarios"/>
-</field>
-<field id="idsegmento_escolar"><phrase id="fldcaption" value="idsegmento escolar"/>
-</field>
-<field id="idcandidatos"><phrase id="fldcaption" value="idcandidatos"/>
-</field>
-<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
-</field>
-<field id="fase"><phrase id="fldcaption" value="fase"/>
-</field>
-<field id="idtipoinscricao"><phrase id="fldcaption" value="idtipoinscricao"/>
-</field>
-<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
-</field>
-</table>
-<table id="logradouro"><phrase id="tblcaption" value="logradouro"/>
-<field id="cep"><phrase id="fldcaption" value="cep"/>
-</field>
-<field id="tipo_logradouro"><phrase id="fldcaption" value="tipo logradouro"/>
-</field>
-<field id="endereco"><phrase id="fldcaption" value="endereco"/>
-</field>
-<field id="bairro"><phrase id="fldcaption" value="bairro"/>
-</field>
-<field id="municipio"><phrase id="fldcaption" value="municipio"/>
-</field>
-<field id="uf"><phrase id="fldcaption" value="uf"/>
-</field>
-<field id="cep_formatado"><phrase id="fldcaption" value="cep formatado"/>
-</field>
-<field id="flag"><phrase id="fldcaption" value="flag"/>
-</field>
-</table>
-<table id="logs"><phrase id="tblcaption" value="logs"/>
-<field id="idlogs"><phrase id="fldcaption" value="idlogs"/>
-</field>
-<field id="idusuarios"><phrase id="fldcaption" value="idusuarios"/>
-</field>
-<field id="queryexecutada"><phrase id="fldcaption" value="queryexecutada"/>
-</field>
-<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
-</field>
-<field id="nome_tabela"><phrase id="fldcaption" value="nome tabela"/>
-</field>
-<field id="acao"><phrase id="fldcaption" value="acao"/>
-</field>
-</table>
-<table id="matricula"><phrase id="tblcaption" value="matricula"/>
-<field id="matricula"><phrase id="fldcaption" value="matricula"/>
-</field>
-<field id="idinscricao"><phrase id="fldcaption" value="idinscricao"/>
-</field>
-<field id="ideventos"><phrase id="fldcaption" value="ideventos"/>
-</field>
-<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
-</field>
-<field id="situacao"><phrase id="fldcaption" value="situacao"/>
-</field>
-<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
-</field>
-</table>
-<table id="ocorrencias"><phrase id="tblcaption" value="ocorrencias"/>
-<field id="idocorrencias"><phrase id="fldcaption" value="idocorrencias"/>
-</field>
-<field id="idusuarios"><phrase id="fldcaption" value="idusuarios"/>
-</field>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-<field id="funcionalidade"><phrase id="fldcaption" value="funcionalidade"/>
-</field>
-<field id="data_hora"><phrase id="fldcaption" value="data hora"/>
-</field>
-<field id="situacao"><phrase id="fldcaption" value="situacao"/>
-</field>
-</table>
-<table id="perfil"><phrase id="tblcaption" value="perfil"/>
-<field id="idperfil"><phrase id="fldcaption" value="idperfil"/>
-</field>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
-</field>
-</table>
-<table id="propostamatricula"><phrase id="tblcaption" value="propostamatricula"/>
-<field id="idinscricao"><phrase id="fldcaption" value="idinscricao"/>
-</field>
-<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
-</field>
-<field id="ideventos"><phrase id="fldcaption" value="ideventos"/>
-</field>
-<field id="observacao"><phrase id="fldcaption" value="observacao"/>
-</field>
-<field id="situacao"><phrase id="fldcaption" value="situacao"/>
-</field>
-</table>
-<table id="rendafamiliar"><phrase id="tblcaption" value="rendafamiliar"/>
-<field id="idrendafamiliar"><phrase id="fldcaption" value="idrendafamiliar"/>
-</field>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-</table>
-<table id="segmentoescolar"><phrase id="tblcaption" value="segmentoescolar"/>
-<field id="idsegmento_escolar"><phrase id="fldcaption" value="idsegmento escolar"/>
-</field>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-<field id="idtipo_segmento"><phrase id="fldcaption" value="idtipo segmento"/>
-</field>
-<field id="situacao"><phrase id="fldcaption" value="situacao"/>
-</field>
-</table>
-<table id="tipoinscricao"><phrase id="tblcaption" value="tipoinscricao"/>
-<field id="idtipoinscricao"><phrase id="fldcaption" value="idtipoinscricao"/>
-</field>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-</table>
-<table id="tiposegmento"><phrase id="tblcaption" value="tiposegmento"/>
-<field id="idtipo_segmento"><phrase id="fldcaption" value="idtipo segmento"/>
-</field>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-</table>
-<table id="unidade_escolar"><phrase id="tblcaption" value="unidade escolar"/>
-<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
-</field>
-<field id="inep"><phrase id="fldcaption" value="inep"/>
-</field>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-<field id="responsavel"><phrase id="fldcaption" value="responsavel"/>
-</field>
-<field id="endereco"><phrase id="fldcaption" value="endereco"/>
-</field>
-<field id="bairro"><phrase id="fldcaption" value="bairro"/>
-</field>
-<field id="municipio"><phrase id="fldcaption" value="municipio"/>
-</field>
-<field id="uf"><phrase id="fldcaption" value="uf"/>
-</field>
-<field id="cep"><phrase id="fldcaption" value="cep"/>
-</field>
-<field id="telefone"><phrase id="fldcaption" value="telefone"/>
-</field>
-<field id="celular"><phrase id="fldcaption" value="celular"/>
-</field>
-<field id="_email"><phrase id="fldcaption" value="email"/>
-</field>
-<field id="iddistrito"><phrase id="fldcaption" value="iddistrito"/>
-</field>
-<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
-</field>
-</table>
-<table id="usuarios"><phrase id="tblcaption" value="usuarios"/>
-<field id="idusuarios"><phrase id="fldcaption" value="idusuarios"/>
-</field>
-<field id="nome"><phrase id="fldcaption" value="nome"/>
-</field>
-<field id="login"><phrase id="fldcaption" value="login"/>
-</field>
-<field id="senha"><phrase id="fldcaption" value="senha"/>
-</field>
-<field id="_email"><phrase id="fldcaption" value="email"/>
-</field>
-<field id="situacao"><phrase id="fldcaption" value="situacao"/>
-</field>
-<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
-</field>
-<field id="idperfil"><phrase id="fldcaption" value="idperfil"/>
-</field>
-<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
-</field>
-</table>
-<table id="vagas"><phrase id="tblcaption" value="vagas"/>
-<field id="ideventos"><phrase id="fldcaption" value="ideventos"/>
-</field>
-<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
-</field>
-<field id="idsegmento_escolar"><phrase id="fldcaption" value="idsegmento escolar"/>
-</field>
-<field id="totalvagas"><phrase id="fldcaption" value="totalvagas"/>
-</field>
-<field id="tipovaga"><phrase id="fldcaption" value="tipovaga"/>
-</field>
-<field id="idturno"><phrase id="fldcaption" value="idturno"/>
-</field>
-</table>
-<table id="relestatisticoue"><phrase id="tblcaption" value="Rel Estatistico UE"/>
-<chart id="relatf3rio_estatedstico_por_unidade_escolar"><phrase id="chartcaption" value="Relatório Estatístico por Unidade Escolar"/>
-<phrase id="chartxaxisname" value="Unidade Escolar"/>
-<phrase id="chartyaxisname" value="Total"/>
-</chart>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-<field id="total"><phrase id="fldcaption" value="total"/>
-</field>
-</table>
-<table id="relestatisticodistrito"><phrase id="tblcaption" value="Rel Estatistico Distrito"/>
-<chart id="relatf3rio_estatedstico_por_distrito"><phrase id="chartcaption" value="Relatório Estatístico por Distrito"/>
-<phrase id="chartxaxisname" value="Distrito"/>
-<phrase id="chartyaxisname" value="total"/>
-</chart>
-<field id="descricao"><phrase id="fldcaption" value="descricao"/>
-</field>
-<field id="total"><phrase id="fldcaption" value="total"/>
-</field>
-</table>
-<table id=""/>
-</project>
-</ew-language>
+﻿<?xml version="1.0" standalone="yes"?>
+<ew-language date="2014/11/26" version="7.0.0" id="en" name="English" desc="English" author="e.World Technology Ltd.">
+	<locale>
+		<phrase id="locale" value=""/><!-- *** system locale for this language -->
+		<phrase id="use_system_locale" value="1"/><!-- *** change to "0" to disable system locale and use the following settings *** -->
+		<phrase id="decimal_point" value="."/>
+		<phrase id="thousands_sep" value=","/>
+		<phrase id="mon_decimal_point" value="."/>
+		<phrase id="mon_thousands_sep" value=","/>
+		<phrase id="currency_symbol" value="$"/>
+		<phrase id="positive_sign" value=""/>
+		<phrase id="negative_sign" value="-"/>
+		<phrase id="frac_digits" value="2"/>
+		<phrase id="p_cs_precedes" value="1"/>
+		<phrase id="p_sep_by_space" value="0"/>
+		<phrase id="n_cs_precedes" value="1"/>
+		<phrase id="n_sep_by_space" value="0"/>
+		<phrase id="p_sign_posn" value="3"/>
+		<phrase id="n_sign_posn" value="3"/>
+		<phrase id="time_zone" value="US/Pacific"/><!-- *** used for multi-language site only *** -->
+	</locale>
+	<global>
+		<phrase id="allrecords" value="All"/>
+		<phrase id="alwaysask" value="Always ask for my user name and password"/>
+		<phrase id="autologin" value="Auto login until I logout explicitly"/>
+		<phrase id="backtologin" value="Back to Login Page"/>
+		<phrase id="booleanno" value="No"/>
+		<phrase id="booleanyes" value="Yes"/>
+		<phrase id="breadcrumbdivider" value="/"/>
+		<phrase id="browsernoflashsupport" value="Your browser does not support Flash player." client="1"/>
+		<phrase id="buttonexport" value="Export"/>
+		<phrase id="cancelbtn" value="Cancel" client="1"/>
+		<phrase id="chartorder" value="Order by"/>
+		<phrase id="chartorderxasc" value="Labels ASC"/>
+		<phrase id="chartorderxdesc" value="Labels DESC"/>
+		<phrase id="chartorderyasc" value="Values ASC"/>
+		<phrase id="chartorderydesc" value="Values DESC"/>
+		<phrase id="clicktodrilldown" value="Click to drill down"/>
+		<phrase id="currentfilters" value="Current filters:"/>
+		<phrase id="drilldownallrecords" value="All records"/>
+		<phrase id="drilldownfilters" value="Drill down filters:"/>
+		<phrase id="entersenderemail" value="Please enter sender email" client="1"/>
+		<phrase id="enterpropersenderemail" value="Exceed maximum sender email count or email address incorrect" client="1"/>
+		<phrase id="enterrecipientemail" value="Please enter recipient email" client="1"/>
+		<phrase id="enterproperrecipientemail" value="Exceed maximum recipient email count or email address incorrect" client="1"/>
+		<phrase id="enterproperccemail" value="Exceed maximum cc email count or email address incorrect" client="1"/>
+		<phrase id="enterproperbccemail" value="Exceed maximum bcc email count or email address incorrect" client="1"/>
+		<phrase id="entersubject" value="Please enter subject" client="1"/>
+		<phrase id="emailformsender" value="From"/>
+		<phrase id="emailformrecipient" value="To"/>
+		<phrase id="emailformcc" value="Cc"/>
+		<phrase id="emailformbcc" value="Bcc"/>
+		<phrase id="emailformsubject" value="Subject"/>
+		<phrase id="emailformmessage" value="Message"/>
+		<phrase id="emailformcontenttype" value="Send as"/>
+		<phrase id="emailformcontenttypeurl" value="URL"/>
+		<phrase id="emailformcontenttypehtml" value="HTML"/>
+		<phrase id="emptylabel" value="(Empty)"/>
+		<phrase id="enterpassword" value="Please enter password" client="1"/>
+		<phrase id="enterpwd" value="Please enter password" client="1"/>
+		<phrase id="entersearchcriteria" value="Please enter search criteria"/>
+		<phrase id="enteruid" value="Please enter user ID" client="1"/>
+		<phrase id="entervalidatecode" value="Please enter the validation code shown" client="1"/>
+		<phrase id="exceedmaxemailexport" value="Exceed maximum export email count. Please try again later."/>
+		<phrase id="exportchart" value="Exporting chart: " client="1"/>
+		<phrase id="exportchartdata" value="Exporting chart data" client="1"/>
+		<phrase id="exportcharterror" value="Failed to export chart: " client="1"/>
+		<phrase id="exportingchart" value="Exporting chart (%c of %t), please wait..." client="1"/>
+		<phrase id="exporttoemail" value="Email" imageurl="phprptimages/exportemail.gif" client="1" imagewidth="16" imageheight="16"/>
+		<phrase id="exporttoemailtext" value="Email"/>
+		<phrase id="exporttoexcel" value="Export to Excel" imageurl="phprptimages/exportxls.gif" imagewidth="16" imageheight="16"/>
+		<phrase id="exporttoexceltext" value="Export to Excel"/>
+		<phrase id="exporttopdf" value="Export to PDF" imageurl="phprptimages/exportpdf.gif" imagewidth="16" imageheight="16"/>
+		<phrase id="exporttopdftext" value="Export to PDF"/>
+		<phrase id="exporttoword" value="Export to Word" imageurl="phprptimages/exportdoc.gif" imagewidth="16" imageheight="16"/>
+		<phrase id="exporttowordtext" value="Export to Word"/>
+		<phrase id="fieldrequiredindicator" value="&lt;span class=&quot;ewRequired&quot;&gt;&amp;nbsp;*&lt;/span&gt;"/>
+		<phrase id="filters" value="Filters"/>
+		<phrase id="homepage" value="Home"/>
+		<phrase id="incorrectcreditcard" value="Incorrect credit card number" client="1"/>
+		<phrase id="incorrectdateymd" value="Incorrect date, format = yyyy%smm%sdd"/>
+		<phrase id="incorrectdatemdy" value="Incorrect date, format = mm%sdd%syyyy"/>
+		<phrase id="incorrectdatedmy" value="Incorrect date, format = dd%smm%syyyy"/>
+		<phrase id="incorrectshortdateymd" value="Incorrect date, format = yy%smm%sdd"/>
+		<phrase id="incorrectshortdatemdy" value="Incorrect date, format = mm%sdd%syy"/>
+		<phrase id="incorrectshortdatedmy" value="Incorrect date, format = dd%smm%syy"/>
+		<phrase id="incorrectemail" value="Incorrect email" client="1"/>
+		<phrase id="incorrectfield" value="Incorrect field" client="1"/>
+		<phrase id="incorrectfloat" value="Incorrect floating point number" client="1"/>
+		<phrase id="incorrectguid" value="Incorrect GUID" client="1"/>
+		<phrase id="incorrectinteger" value="Incorrect integer" client="1"/>
+		<phrase id="incorrectphone" value="Incorrect phone number" client="1"/>
+		<phrase id="incorrectrange" value="Number must be between %1 and %2" client="1"/>
+		<phrase id="incorrectregexp" value="Regular expression not matched" client="1"/>
+		<phrase id="incorrectssn" value="Incorrect Social Security Number" client="1"/>
+		<phrase id="incorrecttime" value="Incorrect time (hh:mm:ss)" client="1"/>
+		<phrase id="incorrectzip" value="Incorrect ZIP code" client="1"/>
+		<phrase id="invaliduidpwd" value="Incorrect user ID or password"/>
+		<phrase id="language" value="Language"/>
+		<phrase id="loading" value="Loading%s..." client="1"/>
+		<phrase id="login" value="Login"/>
+		<phrase id="loginpage" value="Login Page"/>
+		<phrase id="logout" value="Logout"/>
+		<phrase id="messageok" value="OK" client="1"/>
+		<phrase id="mobilemenu" value="Menu"/>
+		<phrase id="monthjan" value="Jan"/>
+		<phrase id="monthfeb" value="Feb"/>
+		<phrase id="monthmar" value="Mar"/>
+		<phrase id="monthapr" value="Apr"/>
+		<phrase id="monthmay" value="May"/>
+		<phrase id="monthjun" value="Jun"/>
+		<phrase id="monthjul" value="Jul"/>
+		<phrase id="monthaug" value="Aug"/>
+		<phrase id="monthsep" value="Sep"/>
+		<phrase id="monthoct" value="Oct"/>
+		<phrase id="monthnov" value="Nov"/>
+		<phrase id="monthdec" value="Dec"/>
+		<phrase id="next" value="Next"/>
+		<phrase id="nopermission" value="You do not have permission to access the page."/>
+		<phrase id="norecord" value="No records found"/>
+		<phrase id="noreportorcharts" value="No report or charts is selected for generation. Please check your report/charts settings."/>
+		<phrase id="nodistinctcolvals" value="No distinct column values for sql: "/>
+		<phrase id="nulllabel" value="(Null)"/>
+		<phrase id="of" value="of"/>
+		<phrase id="page" value="Page"/>
+		<phrase id="pagerfirst" value="First"/>
+		<phrase id="pagerlast" value="Last"/>
+		<phrase id="pagernext" value="Next"/>
+		<phrase id="pagerprevious" value="Previous"/>
+		<phrase id="password" value="Password"/>
+		<phrase id="pleaseselect" value="Please Select"/>
+		<phrase id="popupall" value="(All)" client="1"/>
+		<phrase id="popupcancel" value="Cancel" client="1"/>
+		<phrase id="popupfrom" value="From" client="1"/>
+		<phrase id="popupnovalue" value="No value selected!" client="1"/>
+		<phrase id="popupok" value="  OK  " client="1"/>
+		<phrase id="popupselect" value="Please Select" client="1"/>
+		<phrase id="popupto" value="To" client="1"/>
+		<phrase id="prev" value="Prev"/>
+		<phrase id="printerfriendly" value="Printer Friendly" imageurl="phprptimages/print.gif" imagewidth="16" imageheight="16"/>
+		<phrase id="printerfriendlytext" value="Printer Friendly"/>
+		<phrase id="group" value="Groups"/>
+		<phrase id="groupsperpage" value="Groups per page"/>
+		<phrase id="qtr1" value="1st Quarter"/>
+		<phrase id="qtr2" value="2nd Quarter"/>
+		<phrase id="qtr3" value="3rd Quarter"/>
+		<phrase id="qtr4" value="4th Quarter"/>
+		<phrase id="record" value="Records"/>
+		<phrase id="recordsperpage" value="Records per page"/>
+		<phrase id="report" value="Reports"/>
+		<phrase id="reset" value="Reset"/>
+		<phrase id="resetallfilter" value="&lt;span class=&quot;glyphicon glyphicon-filter&quot;&gt;&lt;/span&gt;&lt;small&gt;&lt;span class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/span&gt;&lt;/small&gt;"/>
+		<phrase id="resetallfiltertext" value="Reset all filters"/>
+		<phrase id="resetsearch" value="Reset search criteria"/>
+		<phrase id="rptavg" value="AVG"/>
+		<phrase id="rptcnt" value="COUNT"/>
+		<phrase id="rptdtlrec" value=" detail records"/>
+		<phrase id="rptgrandsummary" value="Grand Summary"/>
+		<phrase id="rptgrandtotal" value="Grand Total"/>
+		<phrase id="rptmax" value="MAX"/>
+		<phrase id="rptmin" value="MIN"/>
+		<phrase id="rptpagesummary" value="Page Summary"/>
+		<phrase id="rptpagetotal" value="Page Total"/>
+		<phrase id="rptseparator" value=":&amp;nbsp;"/>
+		<phrase id="rptsum" value="SUM"/>
+		<phrase id="rptsumhead" value="Summary for"/>
+		<phrase id="saveusername" value="Save my user name"/>
+		<phrase id="search" value="Search"/>
+		<phrase id="selectall" value="(All)"/>
+		<phrase id="sendemailbtn" value="Send" client="1"/>
+		<phrase id="sendemailsuccess" value="Email sent successfully" client="1"/>
+		<phrase id="showall" value="Show all"/>
+		<phrase id="summary" value="Summary"/>
+		<phrase id="tasks" value="Tasks"/>
+		<phrase id="to" value="to"/>
+		<phrase id="top" value="Top"/>
+		<phrase id="total" value="Total"/>
+		<phrase id="unmatchedvalue" value="&lt;img src=&quot;%fwarn.gif&quot; alt=&quot;Value does not exist&quot; title=&quot;Value does not exist&quot; width=&quot;16&quot; height=&quot;15&quot; style=&quot;border: 0;&quot;&gt;"/>
+		<phrase id="username" value="User name"/>
+		<phrase id="week" value="Week"/>
+		<phrase id="year" value="Year"/>
+		<!-- Search Operators -->
+		<phrase id="=" value="&amp;nbsp;"/>
+		<phrase id="&lt;&gt;" value="&amp;lt;&amp;gt;"/>
+		<phrase id="&lt;" value="&amp;lt;"/>
+		<phrase id="&lt;=" value="&amp;lt;="/>
+		<phrase id="&gt;" value="&amp;gt;"/>
+		<phrase id="&gt;=" value="&amp;gt;="/>
+		<phrase id="like" value="contains"/>
+		<phrase id="not like" value="not contains"/>
+		<phrase id="starts with" value="starts with"/>
+		<phrase id="ends with" value="ends with"/>
+		<phrase id="is null" value="is null"/>
+		<phrase id="is not null" value="is not null"/>
+		<phrase id="between" value="between"/>
+		<phrase id="and" value="and"/>
+		<phrase id="or" value="or"/>
+		<!-- Menu Prefix/Suffix -->
+		<phrase id="simplereportmenuitemprefix" value=""/>
+		<phrase id="simplereportmenuitemsuffix" value=""/>
+		<phrase id="detailsummaryreportmenuitemprefix" value=""/>
+		<phrase id="detailsummaryreportmenuitemsuffix" value=""/>
+		<phrase id="crosstabreportmenuitemprefix" value=""/>
+		<phrase id="crosstabreportmenuitemsuffix" value=""/>
+		<phrase id="chartreportmenuitemprefix" value=""/>
+		<phrase id="chartreportmenuitemsuffix" value=""/>
+		<!-- Advanced Filter -->
+		<phrase id="future" value="Future"/>
+		<phrase id="past" value="Past"/>
+		<phrase id="last14days" value="Last 14 days"/>
+		<phrase id="last30days" value="Last 30 days"/>
+		<phrase id="last7days" value="Last 7 days"/>
+		<phrase id="next14days" value="Next 14 days"/>
+		<phrase id="next30days" value="Next 30 days"/>
+		<phrase id="next7days" value="Next 7 days"/>
+		<phrase id="today" value="Today"/>
+		<phrase id="tomorrow" value="Tomorrow"/>
+		<phrase id="yesterday" value="Yesterday"/>
+		<phrase id="lastmonth" value="Last month"/>
+		<phrase id="nextmonth" value="Next month"/>
+		<phrase id="thismonth" value="This month"/>
+		<phrase id="lasttwoweeks" value="Last two weeks"/>
+		<phrase id="lastweek" value="Last week"/>
+		<phrase id="nexttwoweeks" value="Next two weeks"/>
+		<phrase id="nextweek" value="Next week"/>
+		<phrase id="thisweek" value="This week"/>
+		<phrase id="lastyear" value="Last year"/>
+		<phrase id="nextyear" value="Next year"/>
+		<phrase id="thisyear" value="This year"/>
+	</global>
+	<project><phrase id="footertext" value="&amp;copy;2013 e.World Technology Ltd. All rights reserved."/>
+<menu id="1"><phrase id="menutext" value="candidatos"/>
+</menu>
+<menu id="2"><phrase id="menutext" value="distrito"/>
+</menu>
+<menu id="3"><phrase id="menutext" value="eventos"/>
+</menu>
+<menu id="4"><phrase id="menutext" value="inscricao"/>
+</menu>
+<menu id="5"><phrase id="menutext" value="logradouro"/>
+</menu>
+<menu id="6"><phrase id="menutext" value="logs"/>
+</menu>
+<menu id="7"><phrase id="menutext" value="matricula"/>
+</menu>
+<menu id="8"><phrase id="menutext" value="ocorrencias"/>
+</menu>
+<menu id="9"><phrase id="menutext" value="perfil"/>
+</menu>
+<menu id="10"><phrase id="menutext" value="propostamatricula"/>
+</menu>
+<menu id="11"><phrase id="menutext" value="rendafamiliar"/>
+</menu>
+<menu id="12"><phrase id="menutext" value="segmentoescolar"/>
+</menu>
+<menu id="13"><phrase id="menutext" value="tipoinscricao"/>
+</menu>
+<menu id="14"><phrase id="menutext" value="tiposegmento"/>
+</menu>
+<menu id="15"><phrase id="menutext" value="unidade escolar"/>
+</menu>
+<menu id="16"><phrase id="menutext" value="usuarios"/>
+</menu>
+<menu id="17"><phrase id="menutext" value="vagas"/>
+</menu>
+<menu id="18"><phrase id="menutext" value="Rel Estatistico UE"/>
+</menu>
+<menu id="21"><phrase id="menutext" value="Relatório Estatístico por Unidade Escolar"/>
+</menu>
+<menu id="19"><phrase id="menutext" value="Rel Estatistico Distrito"/>
+</menu>
+<menu id="20"><phrase id="menutext" value="Relatório Estatístico por Distrito"/>
+</menu>
+<table id="candidatos"><phrase id="tblcaption" value="candidatos"/>
+<field id="idcandidatos"><phrase id="fldcaption" value="idcandidatos"/>
+</field>
+<field id="nome"><phrase id="fldcaption" value="nome"/>
+</field>
+<field id="pai"><phrase id="fldcaption" value="pai"/>
+</field>
+<field id="mae"><phrase id="fldcaption" value="mae"/>
+</field>
+<field id="nascimento"><phrase id="fldcaption" value="nascimento"/>
+</field>
+<field id="idade"><phrase id="fldcaption" value="idade"/>
+</field>
+<field id="sexo"><phrase id="fldcaption" value="sexo"/>
+</field>
+<field id="endereco"><phrase id="fldcaption" value="endereco"/>
+</field>
+<field id="numero"><phrase id="fldcaption" value="numero"/>
+</field>
+<field id="complemento"><phrase id="fldcaption" value="complemento"/>
+</field>
+<field id="bairro"><phrase id="fldcaption" value="bairro"/>
+</field>
+<field id="cidade"><phrase id="fldcaption" value="cidade"/>
+</field>
+<field id="uf"><phrase id="fldcaption" value="uf"/>
+</field>
+<field id="cep"><phrase id="fldcaption" value="cep"/>
+</field>
+<field id="telefone"><phrase id="fldcaption" value="telefone"/>
+</field>
+<field id="celular"><phrase id="fldcaption" value="celular"/>
+</field>
+<field id="idrendafamiliar"><phrase id="fldcaption" value="idrendafamiliar"/>
+</field>
+<field id="num_irmaos"><phrase id="fldcaption" value="num irmaos"/>
+</field>
+<field id="responsavel"><phrase id="fldcaption" value="responsavel"/>
+</field>
+<field id="cpf"><phrase id="fldcaption" value="cpf"/>
+</field>
+<field id="rg"><phrase id="fldcaption" value="rg"/>
+</field>
+<field id="_email"><phrase id="fldcaption" value="email"/>
+</field>
+<field id="auditiva"><phrase id="fldcaption" value="auditiva"/>
+</field>
+<field id="visual"><phrase id="fldcaption" value="visual"/>
+</field>
+<field id="motora"><phrase id="fldcaption" value="motora"/>
+</field>
+<field id="intelectual"><phrase id="fldcaption" value="intelectual"/>
+</field>
+<field id="multipla"><phrase id="fldcaption" value="multipla"/>
+</field>
+<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
+</field>
+</table>
+<table id="distrito"><phrase id="tblcaption" value="distrito"/>
+<field id="iddistrito"><phrase id="fldcaption" value="iddistrito"/>
+</field>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+</table>
+<table id="eventos"><phrase id="tblcaption" value="eventos"/>
+<field id="ideventos"><phrase id="fldcaption" value="ideventos"/>
+</field>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+<field id="data_inicio"><phrase id="fldcaption" value="data inicio"/>
+</field>
+<field id="data_termino"><phrase id="fldcaption" value="data termino"/>
+</field>
+<field id="situacao"><phrase id="fldcaption" value="situacao"/>
+</field>
+<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
+</field>
+</table>
+<table id="inscricao"><phrase id="tblcaption" value="inscricao"/>
+<field id="idinscricao"><phrase id="fldcaption" value="idinscricao"/>
+</field>
+<field id="idusuarios"><phrase id="fldcaption" value="idusuarios"/>
+</field>
+<field id="idsegmento_escolar"><phrase id="fldcaption" value="idsegmento escolar"/>
+</field>
+<field id="idcandidatos"><phrase id="fldcaption" value="idcandidatos"/>
+</field>
+<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
+</field>
+<field id="fase"><phrase id="fldcaption" value="fase"/>
+</field>
+<field id="idtipoinscricao"><phrase id="fldcaption" value="idtipoinscricao"/>
+</field>
+<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
+</field>
+</table>
+<table id="logradouro"><phrase id="tblcaption" value="logradouro"/>
+<field id="cep"><phrase id="fldcaption" value="cep"/>
+</field>
+<field id="tipo_logradouro"><phrase id="fldcaption" value="tipo logradouro"/>
+</field>
+<field id="endereco"><phrase id="fldcaption" value="endereco"/>
+</field>
+<field id="bairro"><phrase id="fldcaption" value="bairro"/>
+</field>
+<field id="municipio"><phrase id="fldcaption" value="municipio"/>
+</field>
+<field id="uf"><phrase id="fldcaption" value="uf"/>
+</field>
+<field id="cep_formatado"><phrase id="fldcaption" value="cep formatado"/>
+</field>
+<field id="flag"><phrase id="fldcaption" value="flag"/>
+</field>
+</table>
+<table id="logs"><phrase id="tblcaption" value="logs"/>
+<field id="idlogs"><phrase id="fldcaption" value="idlogs"/>
+</field>
+<field id="idusuarios"><phrase id="fldcaption" value="idusuarios"/>
+</field>
+<field id="queryexecutada"><phrase id="fldcaption" value="queryexecutada"/>
+</field>
+<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
+</field>
+<field id="nome_tabela"><phrase id="fldcaption" value="nome tabela"/>
+</field>
+<field id="acao"><phrase id="fldcaption" value="acao"/>
+</field>
+</table>
+<table id="matricula"><phrase id="tblcaption" value="matricula"/>
+<field id="matricula"><phrase id="fldcaption" value="matricula"/>
+</field>
+<field id="idinscricao"><phrase id="fldcaption" value="idinscricao"/>
+</field>
+<field id="ideventos"><phrase id="fldcaption" value="ideventos"/>
+</field>
+<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
+</field>
+<field id="situacao"><phrase id="fldcaption" value="situacao"/>
+</field>
+<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
+</field>
+</table>
+<table id="ocorrencias"><phrase id="tblcaption" value="ocorrencias"/>
+<field id="idocorrencias"><phrase id="fldcaption" value="idocorrencias"/>
+</field>
+<field id="idusuarios"><phrase id="fldcaption" value="idusuarios"/>
+</field>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+<field id="funcionalidade"><phrase id="fldcaption" value="funcionalidade"/>
+</field>
+<field id="data_hora"><phrase id="fldcaption" value="data hora"/>
+</field>
+<field id="situacao"><phrase id="fldcaption" value="situacao"/>
+</field>
+</table>
+<table id="perfil"><phrase id="tblcaption" value="perfil"/>
+<field id="idperfil"><phrase id="fldcaption" value="idperfil"/>
+</field>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
+</field>
+</table>
+<table id="propostamatricula"><phrase id="tblcaption" value="propostamatricula"/>
+<field id="idinscricao"><phrase id="fldcaption" value="idinscricao"/>
+</field>
+<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
+</field>
+<field id="ideventos"><phrase id="fldcaption" value="ideventos"/>
+</field>
+<field id="observacao"><phrase id="fldcaption" value="observacao"/>
+</field>
+<field id="situacao"><phrase id="fldcaption" value="situacao"/>
+</field>
+</table>
+<table id="rendafamiliar"><phrase id="tblcaption" value="rendafamiliar"/>
+<field id="idrendafamiliar"><phrase id="fldcaption" value="idrendafamiliar"/>
+</field>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+</table>
+<table id="segmentoescolar"><phrase id="tblcaption" value="segmentoescolar"/>
+<field id="idsegmento_escolar"><phrase id="fldcaption" value="idsegmento escolar"/>
+</field>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+<field id="idtipo_segmento"><phrase id="fldcaption" value="idtipo segmento"/>
+</field>
+<field id="situacao"><phrase id="fldcaption" value="situacao"/>
+</field>
+</table>
+<table id="tipoinscricao"><phrase id="tblcaption" value="tipoinscricao"/>
+<field id="idtipoinscricao"><phrase id="fldcaption" value="idtipoinscricao"/>
+</field>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+</table>
+<table id="tiposegmento"><phrase id="tblcaption" value="tiposegmento"/>
+<field id="idtipo_segmento"><phrase id="fldcaption" value="idtipo segmento"/>
+</field>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+</table>
+<table id="unidade_escolar"><phrase id="tblcaption" value="unidade escolar"/>
+<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
+</field>
+<field id="inep"><phrase id="fldcaption" value="inep"/>
+</field>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+<field id="responsavel"><phrase id="fldcaption" value="responsavel"/>
+</field>
+<field id="endereco"><phrase id="fldcaption" value="endereco"/>
+</field>
+<field id="bairro"><phrase id="fldcaption" value="bairro"/>
+</field>
+<field id="municipio"><phrase id="fldcaption" value="municipio"/>
+</field>
+<field id="uf"><phrase id="fldcaption" value="uf"/>
+</field>
+<field id="cep"><phrase id="fldcaption" value="cep"/>
+</field>
+<field id="telefone"><phrase id="fldcaption" value="telefone"/>
+</field>
+<field id="celular"><phrase id="fldcaption" value="celular"/>
+</field>
+<field id="_email"><phrase id="fldcaption" value="email"/>
+</field>
+<field id="iddistrito"><phrase id="fldcaption" value="iddistrito"/>
+</field>
+<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
+</field>
+</table>
+<table id="usuarios"><phrase id="tblcaption" value="usuarios"/>
+<field id="idusuarios"><phrase id="fldcaption" value="idusuarios"/>
+</field>
+<field id="nome"><phrase id="fldcaption" value="nome"/>
+</field>
+<field id="login"><phrase id="fldcaption" value="login"/>
+</field>
+<field id="senha"><phrase id="fldcaption" value="senha"/>
+</field>
+<field id="_email"><phrase id="fldcaption" value="email"/>
+</field>
+<field id="situacao"><phrase id="fldcaption" value="situacao"/>
+</field>
+<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
+</field>
+<field id="idperfil"><phrase id="fldcaption" value="idperfil"/>
+</field>
+<field id="dtreg"><phrase id="fldcaption" value="dtreg"/>
+</field>
+</table>
+<table id="vagas"><phrase id="tblcaption" value="vagas"/>
+<field id="ideventos"><phrase id="fldcaption" value="ideventos"/>
+</field>
+<field id="idunidade_escolar"><phrase id="fldcaption" value="idunidade escolar"/>
+</field>
+<field id="idsegmento_escolar"><phrase id="fldcaption" value="idsegmento escolar"/>
+</field>
+<field id="totalvagas"><phrase id="fldcaption" value="totalvagas"/>
+</field>
+<field id="tipovaga"><phrase id="fldcaption" value="tipovaga"/>
+</field>
+<field id="idturno"><phrase id="fldcaption" value="idturno"/>
+</field>
+</table>
+<table id="relestatisticoue"><phrase id="tblcaption" value="Rel Estatistico UE"/>
+<chart id="relatf3rio_estatedstico_por_unidade_escolar"><phrase id="chartcaption" value="Relatório Estatístico por Unidade Escolar"/>
+<phrase id="chartxaxisname" value="Unidade Escolar"/>
+<phrase id="chartyaxisname" value="Total"/>
+</chart>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+<field id="total"><phrase id="fldcaption" value="total"/>
+</field>
+</table>
+<table id="relestatisticodistrito"><phrase id="tblcaption" value="Rel Estatistico Distrito"/>
+<chart id="relatf3rio_estatedstico_por_distrito"><phrase id="chartcaption" value="Relatório Estatístico por Distrito"/>
+<phrase id="chartxaxisname" value="Distrito"/>
+<phrase id="chartyaxisname" value="total"/>
+</chart>
+<field id="descricao"><phrase id="fldcaption" value="descricao"/>
+</field>
+<field id="total"><phrase id="fldcaption" value="total"/>
+</field>
+</table>
+<table id=""/>
+</project>
+</ew-language>

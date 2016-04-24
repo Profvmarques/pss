@@ -34,13 +34,18 @@ class Inscricao {
     private $idexperencia;
     private $idtitulacao;
     private $idusuarios;
+    private $experiencia_adm_publica;
+    private $participacao_projetos;
+    private $curso_extensao;
+    private $curso_aperfeicoamento;
+    private $inf_basica;
     private $pontos;
 
    //Método
 
-    public function Incluir($rg,$data_expedicao,$nome,$sexo,$nascimento,$endereco,$numero,$complemento, $bairro, $municipio, $uf, $cep,$telefone,$celular,$email,$idcargos, $idexperiencia, $idtitulacao,$idusuarios,$pontos) {
+    public function Incluir($rg,$data_expedicao,$nome,$sexo,$nascimento,$endereco,$numero,$complemento, $bairro, $municipio, $uf, $cep,$telefone,$celular,$email,$idcargos, $idexperiencia, $idusuarios,$experiencia_adm_publica,$participacao_projetos,$curso_extensao,$curso_aperfeicoamento,$inf_basica,$pontos) {
 
-       $insert = 'insert into inscricao(rg, data_expedicao,nome,sexo,nascimento,endereco,numero,complemento, bairro, municipio, uf, cep,telefone,celular,email,idcargos, idexperiencia, idtitulacao,idusuarios, pontos,dtreg) values("'.$rg.'","'.$data_expedicao.'","'.$nome.'","'.$sexo.'","'.$nascimento.'","'.$endereco.'","'.$numero.'","'.$complemento.'","'.$bairro.'","'.$municipio.'","'.$uf.'","'.$cep.'","'.$telefone.'","'.$celular.'","'.$email.'","'.$idcargos.'","'.$idexperiencia.'","'.$idtitulacao.'","'.$idusuarios.'","'.$pontos.'","'.date('Y-m-d H:i:s').'")';
+       $insert = 'insert into inscricao(rg, data_expedicao,nome,sexo,nascimento,endereco,numero,complemento, bairro, municipio, uf, cep,telefone,celular,email,idcargos, idexperiencia, idusuarios, experiencia_adm_publica,participacao_projetos,curso_extensao,curso_aperfeicoamento,inf_basica,pontos,dtreg) values("'.$rg.'","'.$data_expedicao.'","'.$nome.'","'.$sexo.'","'.$nascimento.'","'.$endereco.'","'.$numero.'","'.$complemento.'","'.$bairro.'","'.$municipio.'","'.$uf.'","'.$cep.'","'.$telefone.'","'.$celular.'","'.$email.'","'.$idcargos.'","'.$idexperiencia.'","'.$idusuarios.'","'.$experiencia_adm_publica.'","'.$participacao_projetos.'","'.$curso_extensao.'","'.$curso_aperfeicoamento.'","'.$inf_basica.'","'.$pontos.'","'.date('Y-m-d H:i:s').'")';
 
         $Acesso = new Acesso();
         $Acesso->Conexao();
@@ -82,10 +87,11 @@ class Inscricao {
 
        //Editar
 
-    public function alterar($idinscricao,$rg,$data_expedicao,$nome,$sexo,$nascimento,$endereco,$numero,$complemento, $bairro, $municipio, $uf, $cep,$telefone,$celular,$email,$idcargos, $idexperiencia, $idtitulacao,$idusuarios,$pontos) {
+    public function alterar($idinscricao,$rg,$data_expedicao,$nome,$sexo,$nascimento,$endereco,$numero,$complemento, $bairro, $municipio, $uf, $cep,$telefone,$celular,$email,$idcargos, $idexperiencia, $idusuarios,$experiencia_adm_publica,$participacao_projetos,$curso_extensao,$curso_aperfeicoamento,$inf_basica,$pontos) {
 
        $update = 'update inscricao set rg="'.$rg.'",data_expedicao="'.$data_expedicao.'", nome="'.$nome.'",sexo="'.$sexo.'",
-                      nascimento="'.$nascimento.'", endereco="'.$endereco.'",numero="'.$numero.'",complemento="'.$complemento.'",bairro="'.$bairro.'",municipio="'.$municipio.'",uf="'.$uf.'",cep="'.$cep.'",telefone="'.$telefone.'",celular="'.$celular.'",email="'.$email.'",idcargos="'.$idcargos.'",idexperiencia="'.$idexperiencia.'",idtitulacao="'.$idtitulacao.'",idusuarios="'.$idusuarios.'",pontos="'.$pontos.'" 
+                      nascimento="'.$nascimento.'", endereco="'.$endereco.'",numero="'.$numero.'",complemento="'.$complemento.'",bairro="'.$bairro.'",municipio="'.$municipio.'",uf="'.$uf.'",cep="'.$cep.'",telefone="'.$telefone.'",celular="'.$celular.'",email="'.$email.'",idcargos="'.$idcargos.'",idexperiencia="'.$idexperiencia.'",idusuarios="'.$idusuarios.'",'
+               . 'experiencia_adm_publica="'.$experiencia_adm_publica.'",participacao_projetos="'.$participacao_projetos.'",curso_extensao="'.$curso_extensao.'",curso_aperfeicoamento="'.$curso_aperfeicoamento.'",inf_basica="'.$inf_basica.'",pontos="'.$pontos.'" 
 			where idinscricao="'.$idinscricao.'"';
 
         $Acesso = new Acesso();

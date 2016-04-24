@@ -138,10 +138,8 @@
 
     
 
-  <?php 
-
+ <?php 
 if ($_SESSION['idperfil']==2){
-
 ?>
 
   </p>
@@ -203,6 +201,9 @@ if ($_SESSION['idperfil']==2){
 
 
     <?php }?>
+
+
+
 
 
 

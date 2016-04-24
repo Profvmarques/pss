@@ -146,9 +146,6 @@ function Processo($Processo) {
 
 
 
-
-
-
             if ($_POST['ok'] == 'true') {
                 try {
 
@@ -163,9 +160,50 @@ function Processo($Processo) {
                         $pontos = 0;
                         $inscricao->consultar("BEGIN");
 
-                        $pontos+=$titulacao->obterPontos($_POST['idtitulacao']);
+                        //$pontos+=$titulacao->obterPontos($_POST['idtitulacao']);
                         $pontos+=$experiencia->obterPontos($_POST['idexperiencia']);
 
+                        /* calculando experiencia em Administração pública */
+                        if ($_POST['experiencia_adm_publica'] == 'on') {
+                            $experiencia_adm_publica = 1;
+                            $pontos+=2;
+                        }else{
+                            $experiencia_adm_publica = 0;
+                            $pontos+=0;
+                        }
+                        
+                        /* calculando pontos dos cursos*/
+                        if ($_POST['participacao_projetos'] == 'on') {
+                            $participacao_projetos = 1;
+                            $pontos+=0.25;
+                        }else{
+                            $participacao_projetos = 0;
+                            $pontos+=0;
+                        }
+                        
+                        if ($_POST['curso_extensao'] == 'on') {
+                            $curso_extensao = 1;
+                            $pontos+=0.25;
+                        }else{
+                            $curso_extensao = 0;
+                            $pontos+=0;
+                        }
+                        
+                        if ($_POST['curso_aperfeicoamento'] == 'on') {
+                            $curso_aperfeicoamento = 1;
+                            $pontos+=0.25;
+                        }else{
+                            $curso_aperfeicoamento = 0;
+                            $pontos+=0;
+                        }
+                        
+                        if ($_POST['inf_basica'] == 'on') {
+                            $inf_basica = 1;
+                            $pontos+=0.25;
+                        }else{
+                            $inf_basica = 0;
+                            $pontos+=0;
+                        }
 
                         $idusuarios = $usuarios->incluirPublico($_POST['cpf'], $_POST['senha'], 1);
                         //Para resolver o insert do logs
@@ -173,7 +211,7 @@ function Processo($Processo) {
                             $_SESSION['idusuarios'] = $idusuarios;
                         }
 
-                        $idinscricao = $inscricao->incluir($_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), $_POST['nome'], $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), $_POST['endereco'], $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['municipio'], $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], $_POST['email'], $_POST['idcargos'], $_POST['idexperiencia'], $_POST['idtitulacao'], $idusuarios, $pontos);
+                        $idinscricao = $inscricao->incluir($_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), $_POST['nome'], $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), $_POST['endereco'], $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['municipio'], $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], $_POST['email'], $_POST['idcargos'], $_POST['idexperiencia'], $idusuarios, $experiencia_adm_publica,$participacao_projetos,$curso_extensao,$curso_aperfeicoamento,$inf_basica,$pontos);
 
                         $descricao = "Realizado Cadastro do Candidato <b>" . $_POST['nome'] . "</b> pelo usuário <b>" . $_SESSION['cpf'] . "</b>";
                         $funcionalidade = "Cadastro de novo candidato";
@@ -215,6 +253,7 @@ function Processo($Processo) {
             global $linhaEditar;
             global $rsEditar;
 
+            $util->Seguranca($_SESSION['idusuarios'], '../../index.php');
             if ($_GET['cadastro'] == 0) {
 
                 $util->Seguranca($_SESSION['idusuarios'], '../index.php');
@@ -234,9 +273,9 @@ function Processo($Processo) {
             $linha3 = $inscricao->Linha;
             $rs3 = $inscricao->Result;
 
-            $inscricao->consultar("select *, date_format(nascimento, '%d/%m/%Y') as dtnasc, date_format(data_expedicao, '%d/%m/%Y') as data_exp,  date_format(i.dtreg, '%d/%m/%Y %H:%i:%s') as dtinscricao from inscricao i INNER join usuarios u on(i.idusuarios=u.idusuarios) 
+            $inscricao->consultar("select *, date_format(nascimento, '%d/%m/%Y') as dtnasc, date_format(data_expedicao, '%d/%m/%Y') as data_exp,  date_format(i.dtreg, '%d/%m/%Y %H:%i:%s') as dtinscricao, 
+                if(i.experiencia_adm_publica=1,'checked=\"checked\"','') as experiencia_adm_p, if(i.participacao_projetos=1,'checked=\"checked\"','') as participacao_proj, if(i.curso_extensao=1,'checked=\"checked\"','') as curso_ext, if(i.curso_aperfeicoamento=1,'checked=\"checked\"','') as curso_a, if(i.inf_basica=1,'checked=\"checked\"','') as inf_b from inscricao i INNER join usuarios u on(i.idusuarios=u.idusuarios) 
 inner join cargos c on(i.idcargos = c.idcargos)
-inner join titulacao t on(i.idtitulacao=t.idtitulacao) 
 inner JOIN experiencia e on(i.idexperiencia=e.idexperiencia)
 where i.idinscricao=" . $_GET['id']);
             $linhaEditar = $inscricao->Linha;
@@ -249,13 +288,56 @@ where i.idinscricao=" . $_GET['id']);
                     $pontos = 0;
                     $inscricao->consultar("BEGIN");
 
-                    $pontos+=$titulacao->obterPontos($_POST['idtitulacao']);
+                    //$pontos+=$titulacao->obterPontos($_POST['idtitulacao']);
                     $pontos+=$experiencia->obterPontos($_POST['idexperiencia']);
 
                     $idusuarios = mysql_result($rsEditar, 0, 'i.idusuarios');
                     $idinscricao = mysql_result($rsEditar, 0, 'i.idinscricao');
+                    
+                    
+                        /* calculando experiencia em Administração pública */
+                        if ($_POST['experiencia_adm_publica'] == 'on') {
+                            $experiencia_adm_publica = 1;
+                            $pontos+=2;
+                        }else{
+                            $experiencia_adm_publica = 0;
+                            $pontos+=0;
+                        }
+                        
+                        /* calculando pontos dos cursos*/
+                        if ($_POST['participacao_projetos'] == 'on') {
+                            $participacao_projetos = 1;
+                            $pontos+=0.25;
+                        }else{
+                            $participacao_projetos = 0;
+                            $pontos+=0;
+                        }
+                        
+                        if ($_POST['curso_extensao'] == 'on') {
+                            $curso_extensao = 1;
+                            $pontos+=0.25;
+                        }else{
+                            $curso_extensao = 0;
+                            $pontos+=0;
+                        }
+                        
+                        if ($_POST['curso_aperfeicoamento'] == 'on') {
+                            $curso_aperfeicoamento = 1;
+                            $pontos+=0.25;
+                        }else{
+                            $curso_aperfeicoamento = 0;
+                            $pontos+=0;
+                        }
+                        
+                        if ($_POST['inf_basica'] == 'on') {
+                            $inf_basica = 1;
+                            $pontos+=0.25;
+                        }else{
+                            $inf_basica = 0;
+                            $pontos+=0;
+                        }
 
-                    $inscricao->alterar($idinscricao, $_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), $_POST['nome'], $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), $_POST['endereco'], $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['municipio'], $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], $_POST['email'], $_POST['idcargos'], $_POST['idexperiencia'], $_POST['idtitulacao'], $idusuarios, $pontos);
+                    $inscricao->alterar($idinscricao, $_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), $_POST['nome'], $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), $_POST['endereco'], $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['municipio'], $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], $_POST['email'], $_POST['idcargos'], $_POST['idexperiencia'],$idusuarios, $experiencia_adm_publica,$participacao_projetos,$curso_extensao,$curso_aperfeicoamento,$inf_basica,$pontos);
 
                     $descricao = "Realizada a Atualização do Candidato <b>" . $_POST['nome'] . "</b> pelo usuário <b>" . $_SESSION['cpf'] . "</b>";
                     $funcionalidade = "Cadastro de novo candidato";

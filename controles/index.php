@@ -48,6 +48,7 @@ function Processo($Processo) {
                     $_SESSION['horalogado'] = "Logado em " . date('H:i');
 
 
+
                     if ($_SESSION['idperfil'] == 1) {
                         $pg = "default.php?pg=" . base64_encode('view/publico/incluir.php') . "&form=" . base64_encode('Painel');
                     }
@@ -55,7 +56,8 @@ function Processo($Processo) {
                     if ($_SESSION['idperfil'] == 2) {
 
                         $pg = "default.php?pg=" . base64_encode('view/publico/incluirGestao.php') . "&form=" . base64_encode('Painel');
-                    }                 
+                    }
+                 
 
                     $util->redirecionamentopage($pg);
                 } else {
