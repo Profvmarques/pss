@@ -7,7 +7,11 @@ require_once('../../controles/relatorios.php');
 Processo('fichaCandidato');
 
 ?>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PSS - FUNDEC</title>
+</head>
 <style type="text/css">
 
 <!--
@@ -41,7 +45,7 @@ Processo('fichaCandidato');
 
   <p align="center" class="style1">&nbsp;</p>
 
-  <p align="center" class="style1"><span class="style23">EDITAL N.º 003 DO PROCESSO SELETIVO SIMPLIFICADO N.º 01/2016</span></p>
+  <p align="center" class="style1"><span class="style23">EDITAL N.&ordm; 003 DO PROCESSO SELETIVO SIMPLIFICADO N.&ordm; 01/2016</span></p>
 
   <br />
 
@@ -79,7 +83,7 @@ Processo('fichaCandidato');
 </center>
 
 </body>
-
+</html>
 <?php 
 
 $html = ob_get_clean();

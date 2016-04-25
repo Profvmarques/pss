@@ -3,6 +3,11 @@ ob_start();
 require_once('../../controles/relatorios.php');
 Processo('listaGeralCargo');
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PSS - FUNDEC</title>
+</head>
 <script src="../../js/Validacaoform.js"></script>
 <style type="text/css">
 .style1 {font-size: 16px}
@@ -63,20 +68,21 @@ Processo('listaGeralCargo');
     <?php 
  for ($i = 0; $i < $linha; $i++) {	
 	if($array[$i]['cargo']!='' && $array[$i]['total']>0 && $array[$i]['total']<= $linha) {?>
-    <tr>
+    <tr style="color:#fff">
 
-      <td colspan="4" bgcolor="#CCCCCC" class="style24" style="border: 1px solid #000000;"><center><b><?php echo @mysql_result($rs,$i,'c.descricao');?><b></center></td>
+      <td colspan="5" bgcolor="#337ab7" class="style24" style="border: 1px solid #">
+      <center><b><?php echo utf8_encode(@mysql_result($rs,$i,'c.descricao'));?><b></center>
 
     </tr>
 
-    <tr>
+    <tr style="color:#fff">
 
-      <td width="121" bgcolor="#CCCCCC" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">INSCRI</span>&Ccedil;&Atilde;O</strong></td>
+      <td width="121" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">INSCRI</span>&Ccedil;&Atilde;O</strong></td>
 
-      <td width="338" bgcolor="#CCCCCC" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">NOME</span></strong></td>
-      <td width="351" bgcolor="#CCCCCC" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">NASCIMENTO</span><span class="style1"> </span></strong></td>
+      <td width="338" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">NOME</span></strong></td>
+      <td width="351" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">NASCIMENTO</span><span class="style1"> </span></strong></td>
 
-      <td width="164" bgcolor="#CCCCCC" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">PONTUA</span>&Ccedil;&Atilde;O<span class="style1"></span></strong></td>
+      <td width="164" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">PONTUA</span>&Ccedil;&Atilde;O<span class="style1"></span></strong></td>
 
       </tr>
        <?php }
@@ -96,7 +102,7 @@ Processo('listaGeralCargo');
 
         <center>
 
-          <p class="style1"><?php echo utf8_decode(@mysql_result($rs,$i,'i.nome'));?></p>
+          <p class="style1"><?php echo utf8_encode(@mysql_result($rs,$i,'i.nome'));?></p>
 
         </center>
 
@@ -125,7 +131,7 @@ Processo('listaGeralCargo');
 </form>
   </body>
 
-
+</htmL>
 
   
 

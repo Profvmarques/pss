@@ -34,9 +34,9 @@ Processo('incluirPublico');
 					<!--DADOS GERAIS -->
 					
 					<center>									   
-						<h3><legend>EDITAL N.º 003 DO PROCESSO SELETIVO SIMPLIFICADO N.º 01/2016
+						<h3><legend>EDITAL N.&ordm; 003 DO PROCESSO SELETIVO SIMPLIFICADO N.&ordm; 01/2016
                         <br /><br />
-                        DADOS DO CANDIDATO
+                        CADASTRO DE RESERVA DE CANDIDATOS
 
 
                         </legend>

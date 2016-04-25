@@ -48,7 +48,7 @@ where i.idinscricao=" . $_GET['id']);
             global $array;
 
             $inscricao->consultar("select *, date_format(nascimento, '%d/%m/%Y') as dtnasc from inscricao i inner join usuarios u on(i.idusuarios=u.idusuarios) inner join cargos c on(i.idcargos = c.idcargos)
-order by c.descricao, i.nome");
+order by c.descricao, i.pontos desc, dtnasc, i.nome");
             $linha = $inscricao->Linha;
             $rs = $inscricao->Result;
 
