@@ -211,7 +211,7 @@ function Processo($Processo) {
                             $_SESSION['idusuarios'] = $idusuarios;
                         }
 
-                        $idinscricao = $inscricao->incluir($_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), $_POST['nome'], $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), $_POST['endereco'], $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['municipio'], $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], $_POST['email'], $_POST['idcargos'], $_POST['idexperiencia'], $idusuarios, $experiencia_adm_publica,$participacao_projetos,$curso_extensao,$curso_aperfeicoamento,$inf_basica,$pontos);
+                        $idinscricao = $inscricao->incluir($_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), strtoupper($_POST['nome']), $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), strtoupper($_POST['endereco']), $_POST['numero'], strtoupper($_POST['complemento']), strtoupper($_POST['bairro']), strtoupper($_POST['municipio']), $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], strtoupper($_POST['email']), $_POST['idcargos'], $_POST['idexperiencia'], $idusuarios, $experiencia_adm_publica,$participacao_projetos,$curso_extensao,$curso_aperfeicoamento,$inf_basica,$pontos);
 
                         $descricao = "Realizado Cadastro do Candidato <b>" . $_POST['nome'] . "</b> pelo usuário <b>" . $_SESSION['cpf'] . "</b>";
                         $funcionalidade = "Cadastro de novo candidato";
@@ -337,7 +337,7 @@ where i.idinscricao=" . $_GET['id']);
                             $pontos+=0;
                         }
 
-                    $inscricao->alterar($idinscricao, $_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), $_POST['nome'], $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), $_POST['endereco'], $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['municipio'], $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], $_POST['email'], $_POST['idcargos'], $_POST['idexperiencia'],$idusuarios, $experiencia_adm_publica,$participacao_projetos,$curso_extensao,$curso_aperfeicoamento,$inf_basica,$pontos);
+                    $inscricao->alterar($idinscricao, $_POST['rg'], $util->formatoDataYMD($_POST['data_expedicao']), strtoupper($_POST['nome']), $_POST['sexo'], $util->formatoDataYMD($_POST['nascimento']), strtoupper($_POST['endereco']), $_POST['numero'], $_POST['complemento'], strtoupper($_POST['bairro']), strtoupper($_POST['municipio']), $_POST['uf'], $_POST['cep'], $_POST['telefone'], $_POST['celular'], strtoupper($_POST['email']), $_POST['idcargos'], $_POST['idexperiencia'],$idusuarios, $experiencia_adm_publica,$participacao_projetos,$curso_extensao,$curso_aperfeicoamento,$inf_basica,$pontos);
 
                     $descricao = "Realizada a Atualização do Candidato <b>" . $_POST['nome'] . "</b> pelo usuário <b>" . $_SESSION['cpf'] . "</b>";
                     $funcionalidade = "Cadastro de novo candidato";

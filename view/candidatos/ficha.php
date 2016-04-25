@@ -71,8 +71,7 @@ Processo('fichaCandidato');
    <br />
   <div class="style26" style="margin-left:auto">CARGO PRETENDIDO &nbsp;: <?php echo @mysql_result($rs,0,'c.descricao');?></div>
     <br />
-  <div class="style26" style="margin-left:auto">TITULA&Ccedil;&Atilde;O&nbsp;: <?php echo @mysql_result($rs,0,'t.descricao');?></div>
-    <br />
+  
   <div class="style26" style="margin-left:auto">EXPERI&Ecirc;NCIA PROFISSIONAL &nbsp;: <?php echo @mysql_result($rs,0,'e.descricao');?></div>
     <br />
   <div class="style26" style="margin-left:auto"><b>TOTAL DE PONTOS &nbsp;: <?php echo @mysql_result($rs,0,'i.pontos');?></b></div>
