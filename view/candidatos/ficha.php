@@ -41,7 +41,7 @@ Processo('fichaCandidato');
 
   <p align="center" class="style1">&nbsp;</p>
 
-  <p align="center" class="style1"><span class="style23">FICHA DE CADASTRO DO PSS</span></p>
+  <p align="center" class="style1"><span class="style23">EDITAL N.º 003 DO PROCESSO SELETIVO SIMPLIFICADO N.º 01/2016</span></p>
 
   <br />
 

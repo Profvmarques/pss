@@ -34,7 +34,12 @@ Processo('incluirPublico');
 					<!--DADOS GERAIS -->
 					
 					<center>									   
-						<h3><legend>DADOS DO CANDIDATO</legend>
+						<h3><legend>EDITAL N.º 003 DO PROCESSO SELETIVO SIMPLIFICADO N.º 01/2016
+                        <br /><br />
+                        DADOS DO CANDIDATO
+
+
+                        </legend>
 						</h3>
 					</center> 
                     
@@ -166,8 +171,8 @@ Processo('incluirPublico');
 						<div class="row-fluid">
 							<div class="col-md-4" >	 
 									<label class="control-label" for="textinput">
-									  <input name="telefone" type="text" class="form-control" id="telefone" title="Campo telefone é obrigatório" onKeyPress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo $_POST['telefone']; ?>" maxlength="15" placeholder="" />
-								    TEL<strong><font color="#FF0000">*</font></strong>.: </label>
+							      TEL<strong><font color="#FF0000">*</font></strong>.: </label>
+					          <input name="telefone" type="text" class="form-control" id="telefone" title="Campo telefone é obrigatório" onKeyPress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo $_POST['telefone']; ?>" maxlength="15" placeholder="" />
 							</div>
                             <div class="col-md-4" >	 
 									<label class="control-label" for="textinput">CEL<strong><font color="#FF0000">*</font></strong>.: </label>

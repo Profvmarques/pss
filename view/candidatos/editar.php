@@ -35,7 +35,10 @@ Processo('editarPublico');
 					
 					<center>									   
 						<h3>
-						  <legend>ATUALIZAÇÃO DOS DADOS DO CANDIDATO</legend>
+						  <legend>
+                          EDITAL N.º 003 DO PROCESSO SELETIVO SIMPLIFICADO N.º 01/2016
+                          <br />
+                          ATUALIZAÇÃO DOS DADOS DO CANDIDATO</legend>
 						</h3>
 					</center> 
                     
