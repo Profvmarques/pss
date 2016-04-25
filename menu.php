@@ -101,16 +101,7 @@
 
       <a href="default.php?pg=<?php echo base64_encode("view/publico/incluir.php");?>&form=<?php echo base64_encode("Painel");?>" class="navbar-brand">Principal</a></div>
 
-      <!-- Collection of nav links, forms, and other content for toggling -->
-
-      <div id="navbarCollapse3" class="collapse navbar-collapse">
-
-        <ul class="nav navbar-nav">
-
-          
-<li><a href="logoff.php">Sair</a></li>
-
-        </ul>
+    
 
         <!-- LOGIN 
 
