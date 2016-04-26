@@ -193,7 +193,7 @@ body {
   &nbsp;
   
 <center>
-  <input name="email2" type="text" class="form-control" id="email2" placeholder="Informe o e-mail cadastrado" title="Informe o seu e-mail cadastrado" />
+  <input name="email" type="text" class="form-control" id="email" placeholder="Informe o e-mail cadastrado" title="Informe o seu e-mail cadastrado" />
   </center>
             </div>
 

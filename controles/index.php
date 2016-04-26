@@ -84,7 +84,8 @@ function Processo($Processo) {
 
             if ($_POST['ok'] == 'true') {
 
-                $sql = "select * from usuarios u inner join perfil on(u.idperfil=perfil.idperfil) where u.email='" . trim($_POST['email']) . "'";
+                 $sql = "select * from usuarios u inner join perfil on(u.idperfil=perfil.idperfil) inner join inscricao i "
+                        . "on(i.idusuarios=u.idusuarios) where i.email='" . trim($_POST['email']) . "' and u.cpf='" . trim(strtoupper($_POST['cpf'])) . "'";
 
                 $usuarios->consultar($sql);
 
@@ -94,7 +95,7 @@ function Processo($Processo) {
 
                 if ($linha > 0) {
 
-                    $login = mysql_result($rs, 0, 'u.login');
+                    $cpf = mysql_result($rs, 0, 'u.cpf');
 
                     $senha = mysql_result($rs, 0, 'u.senha');
 
@@ -102,14 +103,14 @@ function Processo($Processo) {
 
 
 
-                    $usuarios->EnviarEmail($login, $senha, $_POST['email'], $perfil);
+                    $usuarios->EnviarEmail($cpf, $senha, $_POST['email'], $perfil);
 
-                    $util->MsgboxSimNaoNovoCad("Os dados de autenticação de acesso do Matrícula Sem Fila 2016, foram enviado para o seguinte e-mail :" . $_POST['email'], "index.php", NULL);
+                    $util->msgbox("Os dados de autenticação de acesso do PSS, foram enviado para o seguinte e-mail :" . $_POST['email']);
 
                     $util->redirecionamentopage("index.php");
                 } else {
 
-                    $util->msgbox("O e-mail informado não foi encontrado, por favor entre em contato com a secretaria!");
+                    //$util->msgbox("O e-mail informado não foi encontrado, por favor verifique seus dados!");
                 }
             }
 

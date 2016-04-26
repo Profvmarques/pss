@@ -102,7 +102,7 @@ Processo('listaGeralCargo');
 
         <center>
 
-          <p class="style1"><?php echo utf8_encode(@mysql_result($rs,$i,'i.nome'));?></p>
+          <p class="style1"><?php echo @mysql_result($rs,$i,'i.nome');?></p>
 
         </center>
 
@@ -136,8 +136,8 @@ Processo('listaGeralCargo');
   
 
 <?php 
-
-/*$html = ob_get_clean();
+/*
+$html = ob_get_clean();
 
 	// pega o conteudo do buffer, insere na variavel e limpa a memória
 
@@ -175,7 +175,7 @@ Processo('listaGeralCargo');
 
 	$mpdf->SetDisplayMode('fullpage');
 
-	$mpdf->SetFooter('{DATE j/m/Y  H:i}|{PAGENO}/{nb}| PMDC/SMEDC');
+	$mpdf->SetFooter('{DATE j/m/Y  H:i}|{PAGENO}/{nb}| PMDC/FUNDEC');
 
 	 
 
@@ -191,7 +191,7 @@ Processo('listaGeralCargo');
 
 	 
 
-exit();  */  
+exit();  */
 
 ?> 
 
