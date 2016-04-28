@@ -1,45 +1,15 @@
 <?php
-
-
-
 require_once('controles/publico.php');
-
-
-
 Processo('publicoGestao');
-
-
-
 ?>
-
-   
-
-       <meta content="text/html;  charset=UTF-8" http-equiv="content-type">
-
-  
-
-		<title>FORMULÁRIO</title>
-
-
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-		<!-- Optional theme -->
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-
-
-		<!-- Latest compiled and minified JavaScript -->		
-
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-				
-
-		<!-- datetimepicker -->
-
-		
-
+<meta content="text/html;  charset=UTF-8" http-equiv="content-type">
+<title>FORMULÁRIO</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- datetimepicker -->
 <script type="text/javascript">
 
 $('#sandbox-container input').datepicker({
@@ -89,128 +59,98 @@ function MM_swapImage() { //v3.0
 }
 
         </script>
-
-		<style type="text/css">
-
-			.panel-default > .panel-heading-vermelho {
-
-			 background: #A62A2A; color: #fff; }
-
-			.panel-default > .panel-heading-azul{
-
-			 background: #3366FF; color: #fff; }
-
-			.panel-default > .panel-heading-magenta {
-
-			 background: #FF00FF; color: #fff; }
-
-			.panel-default > .panel-heading-amarelo {
-
-			 background: #FFCC00; color: #fff; }
-
-			.centered { margin: 0 auto !important;
-
-    		float: none !important; }
-
-			 
-
-		.col-md-6 .row-fluid .panel.panel-primary .panel-body .container-fluid.centered .row-fluid.centered .centered .col-md-6 .table.table-responsive tr td {
-
+<style type="text/css">
+.panel-default > .panel-heading-vermelho {
+	background: #A62A2A;
+	color: #fff;
+}
+.panel-default > .panel-heading-azul {
+	background: #3366FF;
+	color: #fff;
+}
+.panel-default > .panel-heading-magenta {
+	background: #FF00FF;
+	color: #fff;
+}
+.panel-default > .panel-heading-amarelo {
+	background: #FFCC00;
+	color: #fff;
+}
+.centered {
+	margin: 0 auto !important;
+	float: none !important;
+}
+.col-md-6 .row-fluid .panel.panel-primary .panel-body .container-fluid.centered .row-fluid.centered .centered .col-md-6 .table.table-responsive tr td {
 	color: #FFF;
-
 }
-
-        .col-md-6 .row-fluid .panel.panel-primary .panel-body .container-fluid.centered .row-fluid.centered .centered .col-md-6 .table.table-responsive tr td2 {
-
+.col-md-6 .row-fluid .panel.panel-primary .panel-body .container-fluid.centered .row-fluid.centered .centered .col-md-6 .table.table-responsive tr td2 {
 	color: #004080;
-
 }
-
-        </style>
-
-
-
-
-
+</style>
 <body onLoad="MM_preloadImages('img/pre-inscricao.png','img/transferencia.png','img/quadro-vagas.png','img/atualizar-senha.png','img/1distrito.png','img/2distrito.png','img/3distrito.png','img/4distrito.png')">
-
-
-
-         <div class="container-fluid">
-
-		     <!---->
-
-			 <form class="form-horizontal" role="form"> 
-
-					
-
-					<!--DADOS GERAIS -->
-
-					
-
-					 
-
-				<div class="container-fluid">
-
-                <center>
-
-			   <div class="row">
-
-					    <div class="col-md-4">
-					      
-
-						</div>
-
-<div class="col-md-6">
-
-		<div class="panel panel-primary">
-
-								<div class="panel-heading">
-
-									<h3 class="panel-title">Relatórios</h3>
-
-								</div>
-
-								
-
-								<div class="panel-body">
-
-                                
-
-                                
-
-                                <div class="container-fluid">
-
-                                <div class="row-fluid centered">
-
-                                <div class="centered">
-<table width="292">
-  <tr>
-    <td><strong>Total de inscritos até o momento: <?php echo mysql_result($rs4,0,'total');?></strong></td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-</table>
-<div class="col-md-6">
+<div class="container-fluid">
+<!---->
+<form class="form-horizontal" role="form">
+<!--DADOS GERAIS -->
+<div class="container-fluid">
   <center>
-    <a href="view/relatorios/listaGeralPontuada.php" target="_blank"><img src="img/icone.png" alt="" class="img-responsive" border="0" /> Relatório</a>
+    <div class="row">
+      <div class="col-md-4" style="width:25%;"> </div>
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Relatórios</h3>
+          </div>
+          <div class="panel-body">
+            <div class="container-fluid">
+              <div class="row-fluid centered">
+                <div class="centered">
+                  <table width="292">
+                    <tr>
+                      <td><strong>Total de inscritos até o momento: <?php echo mysql_result($rs4,0,'total');?></strong></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;</p>
+                  <table width="454">
+                    <tr>
+                      <td><strong>Total de inscritos com pontuação superior ou igual a 7 até o momento: <?php echo mysql_result($rs5,0,'total');?></strong></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                    </tr>
+                  </table>
+                  <div class="col-md-10">
+                    <center>
+                      <a href="view/relatorios/listaGeralPontuada.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; line-height: 100px;"><img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px; margin-top:15px; margin-bottom:15px;" /> Relatório de Candidatos no PSS</a>
+                    </center>
+                  </div>
+                  <div class="col-md-10">
+                    <center>
+                      <a href="view/relatorios/listaGeralPontuadaSuperiorIgual.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; line-height: 100px;"><img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px; margin-top:15px; margin-bottom:15px;" /> Relatório de Candidatos com pontuação superior ou igual a 7.</a>
+                    </center>
+                  </div>
+                  <div class="col-md-10">
+                    <center>
+                      <a href="view/relatorios/listaGeralPontuada.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; line-height: 100px;"><img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px; margin-top:15px; margin-bottom:15px;" /> Relatório de quantitativo de candidatos por cargo</a>
+                    </center>
+                  </div>
+                  <p><br />
+                    <br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- fim container-->
+        </div>
+      </div>
+    </div>
   </center>
 </div>
-
-<p><br />
-  <br />
-</p>
-                                </div></div></div>
-								</div><!-- fim container-->
-
-								
-
-							</div>
-</div>
-			   </div></center></div>
-
-			       <!--
+<!--
 
 					<div class="form-group">
 
@@ -313,4 +253,3 @@ function MM_swapImage() { //v3.0
 		 </div> 
 
 </form>-->
-

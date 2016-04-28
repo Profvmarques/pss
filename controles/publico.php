@@ -97,6 +97,10 @@ function Processo($Processo) {
 order by c.descricao, i.nome;");
             $linha4 = $usuarios->Linha;
             $rs4 = $usuarios->Result;
+            
+            $usuarios->consultar("select count(*) as total from inscricao i inner join usuarios u on(i.idusuarios=u.idusuarios) inner join cargos c on(i.idcargos = c.idcargos) where i.pontos>=7");
+            $linha5 = $usuarios->Linha;
+            $rs5 = $usuarios->Result;
             break;
 
 

@@ -57,7 +57,7 @@ function Processo($Processo) {
 
                         $pg = "default.php?pg=" . base64_encode('view/publico/incluirGestao.php') . "&form=" . base64_encode('Painel');
                     }
-                 
+
 
                     $util->redirecionamentopage($pg);
                 } else {
@@ -75,38 +75,27 @@ function Processo($Processo) {
             /* Atributos Globais */
 
             require_once('classes/usuarios.php');
-
             $usuarios = new Usuarios();
-
             $util = new Util();
-
-
 
             if ($_POST['ok'] == 'true') {
 
-                 $sql = "select * from usuarios u inner join perfil on(u.idperfil=perfil.idperfil) inner join inscricao i "
-                        . "on(i.idusuarios=u.idusuarios) where i.email='" . trim($_POST['email']) . "' and u.cpf='" . trim(strtoupper($_POST['cpf'])) . "'";
+                $sql = "select * from usuarios u inner join perfil on(u.idperfil=perfil.idperfil) inner join inscricao i "
+                        . "on(i.idusuarios=u.idusuarios) where i.email='" . trim(strtoupper($_POST['email'])) . "' and u.cpf='" . trim(strtoupper($_POST['cpf'])) . "'";
 
                 $usuarios->consultar($sql);
-
                 $rs = $usuarios->Result;
-
                 $linha = $usuarios->Linha;
 
                 if ($linha > 0) {
 
                     $cpf = mysql_result($rs, 0, 'u.cpf');
-
-                    $senha = mysql_result($rs, 0, 'u.senha');
-
+                    $senha = base64_decode(mysql_result($rs, 0, 'u.senha'));
                     $perfil = mysql_result($rs, 0, 'perfil.descricao');
 
 
-
                     $usuarios->EnviarEmail($cpf, $senha, $_POST['email'], $perfil);
-
                     $util->msgbox("Os dados de autenticação de acesso do PSS, foram enviado para o seguinte e-mail :" . $_POST['email']);
-
                     $util->redirecionamentopage("index.php");
                 } else {
 

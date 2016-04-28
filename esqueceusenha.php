@@ -1,9 +1,6 @@
 <?php
-
 require("controles/index.php");
-
 Processo('esqueceuSenha');
-
 ?>
 
 <!DOCTYPE html>
@@ -229,7 +226,7 @@ body {
 
       <h3>&nbsp;</h3>
 
-    </FORM>
+    </form>
 
 <!-- END Main Content -->
 
