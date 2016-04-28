@@ -199,78 +199,8 @@ function MM_swapImage() { //v3.0
                                 
 
                                  <center> <a href="default.php?pg=<?php echo base64_encode("view/relatorios/chartDistritoEnsino.php");?>&amp;form=<?php echo base64_encode("Gráfico de Inscrição do 1° Distrito (2° Etapa)");?>&amp;ti=<?php echo base64_encode("2");?>"><img src="img/1distrito.png" border="0" class="img-responsive" /></a> </center></div>
-
-                                
-
-                                
-
-                                <div class="col-md-6">
-
-                                
-
-                                  <center><a href="default.php?pg=<?php echo base64_encode("view/relatorios/chartDistritoEnsino2.php");?>&amp;form=<?php echo base64_encode("Gráfico de Inscrição do 2° Distrito (2° Etapa)");?>&amp;ti=<?php echo base64_encode("2");?>"><img src="img/2distrito.png" border="0" class="img-responsive"/></a> </center></div>
-
-                              </div></div></div>
-
-                                
-
-                                 <div class="container-fluid">
-
-                                <div class="row-fluid centered">
-
-                                <div class="centered">
-
-                                <div class="col-md-6">
-
-                                
-
-                                 <center> <a href="default.php?pg=<?php echo base64_encode("view/relatorios/chartDistritoEnsino3.php");?>&amp;form=<?php echo base64_encode("Gráfico de Inscrição do 3° Distrito (2° Etapa)");?>&amp;ti=<?php echo base64_encode("2");?>"><img src="img/3distrito.png" border="0" class="img-responsive"/></a></center> </div>
-
-                                
-
-                                <div class="col-md-6">
-
-                                
-
-                                <center>  <a href="default.php?pg=<?php echo base64_encode("view/relatorios/chartDistritoEnsino4.php");?>&amp;form=<?php echo base64_encode("");?>&amp;ti=<?php echo base64_encode("2");?>"><img src="img/4distrito.png" border="0" class="img-responsive"/></a></center> </div>
-
-                                
-
-                                <!-- RELATÓRIOS NOVOS -->
-
-                                
-
-                                <div class="col-md-6">
-
-                                
-
-                                <center>  <a href="default.php?pg=<?php echo base64_encode("view/relatorios/ListaCandidatoEd_Especial.php");?>&amp;form=<?php echo base64_encode("");?>&amp;ti=<?php echo base64_encode("2");?>"><img src="img/relatorio_ed_especial.png" border="0" class="img-responsive"/></a></center> </div>
-
-                                
-
-                                
-
-                                
-
-                                <div class="col-md-6">
-
-                                
-
-                                <center>  <a href="default.php?pg=<?php echo base64_encode("view/relatorios/ListaCandidatoEd_Infantil.php");?>&amp;form=<?php echo base64_encode("Gráfico de Inscrição do 4° Distrito (2° Etapa)");?>&amp;ti=<?php echo base64_encode("2");?>"><img src="img/relatorio_ed_infantil.png" border="0" class="img-responsive"/></a></center> </div>
-
-                                
-
-                                 <!-- FIM RELATÓRIOS NOVOS -->
-
-                                 
-
-                                 
-
-                               </div> </div>
-
-								</div>
-
-                                </div><!-- fim container-->
+                                </div></div></div>
+								</div><!-- fim container-->
 
 								
 
