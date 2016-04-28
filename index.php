@@ -45,6 +45,7 @@ p.at { font-weight:normal; }
             <li><a href="PSS_2016.pdf" target="_blank">EDITAL N.º 003 DO PROCESSO SELETIVO SIMPLIFICADO N.º 01/2016</a></li>
             <li><a href="default.php?cadastro=1&pg=<?php echo base64_encode('view/candidatos/incluir.php');?>&form=<?php echo base64_encode('Painel')?>" title="">INSCRI&Ccedil;&Otilde;ES</a></li>
             <li><a href="ERRATA_I.PDF" target="_blank"title="">ERRATA I</a></li>
+            <li><a href="ERRATA_II.PDF" target="_blank"title="">ERRATA II</a></li>
             <li><a href="#" title="" style="color:#bfbdbd; text-decoration:none; cursor:text;">RESULTADOS</a></li>
           </ul> 
       <div class="panel panel-primary" style="margin-top:30px;">

@@ -130,7 +130,7 @@ function Processo($Processo) {
                 $util->Seguranca($_SESSION['idusuarios'], '../index.php');
             }
 
-            $inscricao->consultar("select * from cargos where idcargos<>45 order by descricao;");
+            $inscricao->consultar("select * from cargos order by descricao;");
             $linha = $inscricao->Linha;
             $rs = $inscricao->Result;
 
@@ -259,7 +259,7 @@ function Processo($Processo) {
                 $util->Seguranca($_SESSION['idusuarios'], '../index.php');
             }
 
-            $inscricao->consultar("select * from cargos where idcargos<>45 order by descricao;");
+            $inscricao->consultar("select * from cargos order by descricao;");
             $linha = $inscricao->Linha;
             $rs = $inscricao->Result;
 
