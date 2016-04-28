@@ -189,16 +189,18 @@ function MM_swapImage() { //v3.0
     <td><strong>Total de inscritos até o momento: <?php echo mysql_result($rs4,0,'total');?></strong></td>
   </tr>
   <tr>
-    <td><a href="view/relatorios/listaGeralPontuada.php" target="_blank">Relatório</a></td>
+    <td></td>
   </tr>
 </table>
+<div class="col-md-6">
+  <center>
+    <a href="view/relatorios/listaGeralPontuada.php" target="_blank"><img src="img/icone.png" alt="" class="img-responsive" border="0" /> Relatório</a>
+  </center>
+</div>
 
-<br /><br />
-                                <div class="col-md-6">
-
-                                
-
-                                 <center> <a href="default.php?pg=<?php echo base64_encode("view/relatorios/chartDistritoEnsino.php");?>&amp;form=<?php echo base64_encode("Gráfico de Inscrição do 1° Distrito (2° Etapa)");?>&amp;ti=<?php echo base64_encode("2");?>"><img src="img/1distrito.png" border="0" class="img-responsive" /></a> </center></div>
+<p><br />
+  <br />
+</p>
                                 </div></div></div>
 								</div><!-- fim container-->
 
@@ -206,12 +208,7 @@ function MM_swapImage() { //v3.0
 
 							</div>
 </div>
-
-                    
-
-                    
-
-                    </div></center></div>
+			   </div></center></div>
 
 			       <!--
 
