@@ -105,36 +105,28 @@ function MM_swapImage() { //v3.0
             <div class="container-fluid">
               <div class="row-fluid centered">
                 <div class="centered">
-                  <table width="292">
-                    <tr>
-                      <td><strong>Total de inscritos até o momento: <?php echo mysql_result($rs4,0,'total');?></strong></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                    </tr>
-                  </table>
-                  <p>&nbsp;</p>
-                  <table width="454">
-                    <tr>
-                      <td><strong>Total de inscritos com pontuação superior ou igual a 7 até o momento: <?php echo mysql_result($rs5,0,'total');?></strong></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                    </tr>
-                  </table>
-                  <div class="col-md-10">
+                  <p><strong>Total de inscritos até o momento: <span style="color:#F00;"><?php echo mysql_result($rs4,0,'total');?></span></strong></p>
+                  <p><strong>Total de inscritos com pontuação superior ou igual a 7 até o momento: <span style="color:#F00;"><?php echo mysql_result($rs5,0,'total');?></span></strong></p>
+                    
+                  <div class="col-md-13">
                     <center>
-                      <a href="view/relatorios/listaGeralPontuada.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; line-height: 100px;"><img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px; margin-top:15px; margin-bottom:15px;" /> Relatório de Candidatos no PSS</a>
+                      <a href="view/relatorios/listaGeralPontuada.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; line-height: 100px;">
+                      	<img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; margin-left:35px; width:77px;" /></a> 
+                      <a href="view/relatorios/listaGeralPontuadaExcel.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; line-height: 100px;">
+                      	<img src="img/excel1.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px;" /></a>
+                      <p style="color: #52658c; font-size: 22px; line-height: 73px; margin:20px; text-align:left;"> Relatório de Candidatos no PSS</p>
                     </center>
                   </div>
-                  <div class="col-md-10">
+                  <div class="col-md-12">
                     <center>
-                      <a href="view/relatorios/listaGeralPontuadaSuperiorIgual.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; line-height: 100px;"><img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px; margin-top:15px; margin-bottom:15px;" /> Relatório de Candidatos com pontuação superior ou igual a 7.</a>
+                      <a href="view/relatorios/listaGeralPontuadaSuperiorIgual.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; text-align: left;
+    margin: 20px;"><img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px;" /> Relatório de Candidatos com pontuação superior ou igual a 7.</a>
                     </center>
                   </div>
-                  <div class="col-md-10">
+                  <div class="col-md-12">
                     <center>
-                      <a href="view/relatorios/listaGeralPontuada.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; line-height: 100px;"><img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px; margin-top:15px; margin-bottom:15px;" /> Relatório de quantitativo de candidatos por cargo</a>
+                      <a href="view/relatorios/listaGeralPontuada.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; text-align: left;
+    margin: 20px;"><img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px;" /> Relatório de quantitativo de candidatos por cargo</a>
                     </center>
                   </div>
                   <p><br />

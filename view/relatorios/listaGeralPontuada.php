@@ -70,19 +70,19 @@ Processo('listaGeralCargo');
 	if($array[$i]['cargo']!='' && $array[$i]['total']>0 && $array[$i]['total']<= $linha) {?>
     <tr style="color:#fff">
 
-      <td colspan="5" bgcolor="#337ab7" class="style24" style="border: 1px solid #">
+      <td colspan="6" bgcolor="#337ab7" class="style24" style="border: 1px solid #">
       <center><b><?php echo utf8_encode(@mysql_result($rs,$i,'c.descricao'));?><b></center>
 
     </tr>
 
     <tr style="color:#fff">
-
+      <td width="121" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">CLASSIFICA</span>&Ccedil;&Atilde;O </strong></td>
       <td width="121" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">INSCRI</span>&Ccedil;&Atilde;O</strong></td>
 
       <td width="338" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">NOME</span></strong></td>
-      <td width="351" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">NASCIMENTO</span><span class="style1"> </span></strong></td>
+      <td width="351" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><center><strong><span class="style1">NASCIMENTO</span></strong></center></td>
 
-      <td width="164" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><strong><span class="style1">PONTUA</span>&Ccedil;&Atilde;O<span class="style1"></span></strong></td>
+      <td width="164" bgcolor="#337ab7" class="style24" style="border: 1px solid #000000;"><center><strong><span class="style1">PONTUA</span>&Ccedil;&Atilde;O<span class="style1"></span></strong></center></td>
 
       </tr>
        <?php }
@@ -92,6 +92,7 @@ Processo('listaGeralCargo');
 
    
     <tr>
+      <td class="style33" style="border: 1px solid #000000;"><strong><center><?php echo $array[$i]['classificacao']?></center></strong></td>
 
    
  
@@ -111,7 +112,7 @@ Processo('listaGeralCargo');
 	  <p class="style1"><center><?php echo utf8_decode(@mysql_result($rs,$i,'dtnasc'));?></center>
       </p></td>
 
-      <td align="left" class="style33" style="text-align: left"><strong><span class="style1"><?php echo utf8_decode(@mysql_result($rs,$i,'i.pontos'));?></span></strong></td>
+      <td align="left" class="style33" style="text-align: left"><strong><span class="style1"><center><?php echo utf8_decode(@mysql_result($rs,$i,'i.pontos'));?></center></span></strong></td>
 
    
     </tr>
@@ -119,7 +120,7 @@ Processo('listaGeralCargo');
 	  
 	   ?>
     <tr>
-      <td colspan="4" class="style33" style="border: 1px solid #000000;"><?php echo "Total de inscritos: ".$linha;?></td>
+      <td colspan="5" class="style33" style="border: 1px solid #000000;"><?php echo "Total de inscritos: ".$linha;?></td>
       </tr>
 
 </table>

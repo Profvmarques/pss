@@ -161,7 +161,8 @@ Processo('publico');
 
 								      <td width="26%"><label class=" control-label" for="textinput">INSCRIÇÃO</label></td>
 
-								      <td colspan="2"><b>CARGO</b></td>
+								      <td width="47%"><b>CARGO</b></td>
+								      <td width="27%" colspan="2">&nbsp;</td>
 							        </tr>
 
 								    
@@ -169,8 +170,11 @@ Processo('publico');
 
 								      <td><?php echo "000".@mysql_result($rs,$i,'i.idinscricao');?></td>
 
-								      <td width="61%"><?php echo @utf8_decode(mysql_result($rs,$i,'c.descricao'));?></td>
-								      <td width="13%"><a href="view/candidatos/ficha.php?id=<?php echo @mysql_result($rs,$i,'i.idinscricao');?>" target="_blank"><img src="img/lista.png" border="0" /></a></td>
+								      <td><?php echo @utf8_decode(mysql_result($rs,$i,'c.descricao'));?></td>
+								      <td><a href="view/candidatos/ficha.php?id=<?php echo @mysql_result($rs,$i,'i.idinscricao');?>" target="_blank"><img src="img/lista.png" border="0" /></a></td>
+								      <td>&nbsp;
+<a href="default.php?pg=<?php echo base64_encode("view/candidatos/editar.php");?>&id=<?php echo @mysql_result($rs,$i,'i.idinscricao');?>" >Editar</a></td>
+
 							        </tr>
 
 								   

@@ -76,7 +76,17 @@ Processo('fichaCandidato');
   <div class="style26" style="margin-left:auto">CARGO PRETENDIDO &nbsp;: <?php echo @mysql_result($rs,0,'c.descricao');?></div>
     <br />
   
-  <div class="style26" style="margin-left:auto">EXPERI&Ecirc;NCIA PROFISSIONAL &nbsp;: <?php echo @mysql_result($rs,0,'e.descricao');?></div>
+  <div class="style26" style="margin-left:auto"><b>EXPERI&Ecirc;NCIA PROFISSIONAL &nbsp;: <?php echo @mysql_result($rs,0,'e.descricao');?></b></div>
+  <br />
+    <div class="style26" style="margin-left:auto"><b><?php echo $adm_publica;?></b></div>
+    <br />
+    <div class="style261" style="margin-left:auto"><b><?php echo $participacao_projetos;?></b></div>
+    <br />
+    <div class="style261" style="margin-left:auto"><b><?php echo $curso_extensao;?></b></div>
+    <br />
+    <div class="style261" style="margin-left:auto"><b><?php echo $curso_aperfeicoamento;?></b></div>
+    <br />
+    <div class="style261" style="margin-left:auto"><b><?php echo $inf_basica;?></b></div>
     <br />
   <div class="style26" style="margin-left:auto"><b>TOTAL DE PONTOS &nbsp;: <?php echo @mysql_result($rs,0,'i.pontos');?></b></div>
   <p class="style26">&nbsp;</p>

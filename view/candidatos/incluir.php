@@ -229,10 +229,10 @@ Processo('incluirPublico');
              PARTICIPAÇÃO EM PROJETOS  NA ÁREA PRETENDIDA (MÁXIMO DE 01 PROJETO EM 2015).</p>
            <p>
              <input name="curso_extensao" type="checkbox" id="curso_extensao">
-             CURSO DE EXTENSÃO NA  ÁREA PRETENDIDA – CARGA HORÁRIA MINÍMA DE 30H (MÁXIMO DE 01 CURSO). </p>
+             CURSO DE EXTENSÃO NA  ÁREA PRETENDIDA – CARGA HORÁRIA MÍNIMA DE 30H (MÁXIMO DE 01 CURSO). </p>
            <p>
              <input name="curso_aperfeicoamento" type="checkbox" id="curso_aperfeicoamento">
-           CURSO DE APERFEIÇOAMENTO  NA ÁREA PRETENDIDA – CARGA HORÁRIA MINÍMA DE 180H (MÁXIMO DE 01 CURSO).</p>
+           CURSO DE APERFEIÇOAMENTO  NA ÁREA PRETENDIDA – CARGA HORÁRIA MÍNIMA DE 180H (MÁXIMO DE 01 CURSO).</p>
            <p>
              <input name="inf_basica" type="checkbox" id="inf_basica">
            CURSO DE INFORMÁTICA  BÁSICA.</p>
