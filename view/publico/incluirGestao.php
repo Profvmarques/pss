@@ -119,8 +119,14 @@ function MM_swapImage() { //v3.0
                   </div>
                   <div class="col-md-12">
                     <center>
+                      <a href="view/relatorios/listaGeralPreviaHomologacao.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; text-align: left;
+    margin: 20px;"><img src="img/pdf2.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px;" /> Publicação Prévia da Homologação das Inscrições</a>
+                    </center>
+                  </div>
+                  <div class="col-md-12">
+                    <center>
                       <a href="view/relatorios/listaGeralPontuadaSuperiorIgual.php" target="_blank" style="color: #52658c; font-size: 22px; float: left; text-align: left;
-    margin: 20px;"><img src="img/icone.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px;" /> Relatório de Candidatos com pontuação superior ou igual a 7.</a>
+    margin: 20px;"><img src="img/pdf2.png" alt="" class="img-responsive" border="0" style="float:left; margin-right:20px; width:77px;" /> Publicação Prévia das Inscrições Aprovadas para a Entrevista</a>
                     </center>
                   </div>
                   <div class="col-md-12">

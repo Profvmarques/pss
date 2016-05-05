@@ -1,7 +1,7 @@
 <?php
 ob_start(); 
 require_once('../../controles/relatorios.php');
-Processo('listaCargoSuperiorIgual');
+Processo('listaHomologacaoPrevia');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -72,41 +72,54 @@ Processo('listaCargoSuperiorIgual');
   <p align="center">&nbsp;</p>
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-  <p align="center" class="style1"><span class="style1"><strong>PUBLICA&Ccedil;&Atilde;O PR&Eacute;VIA DAS INSCRI&Ccedil;&Otilde;ES Aprovadas PARA a entrevista</strong></span></p>
+  <p align="center" class="style1"><span class="style1"><strong>PUBLICA&Ccedil;&Atilde;O PR&Eacute;VIA DA HOMOLOGA&Ccedil;&Atilde;O DAS INSCRI&Ccedil;&Otilde;ES</strong></span></p>
 
   <br />
 
   <br />
    <?php if($linha>0){?>
    <center>
-     <table width="88%" border="1" cellpadding="2" cellspacing="0" style="border: 0.5px solid #000000;" align="center">
-       <?php 
+  <table width="88%" border="1" cellpadding="2" cellspacing="0" style="border: 0.3px solid #000000;" align="center">
+    <?php 
  for ($i = 0; $i < $linha; $i++) {	
 	if($array[$i]['cargo']!='' && $array[$i]['total']>0 && $array[$i]['total']<= $linha) {?>
-       <tr style="color:#fff">
-         <td colspan="3" bgcolor="#ccc" class="style24" style="border: 0.5px solid #"><center>
-           <b><?php echo @mysql_result($rs,$i,'c.descricao');?><b>
-         </center></td>
-       </tr>
-       <tr style="color:#fff" align="center">
-         <td width="56%" bgcolor="#ccc" class="style24" style="border: 0.5px solid #000000; text-align:center"  ><strong><span class="style11 center">INSCRI</span>&Ccedil;&Atilde;O</strong></td>
-         <td width="44%" bgcolor="#ccc" class="style24" style="border: 0.5px solid #000000; text-align:center"><strong><span class="style11 center">PONTUA</span>&Ccedil;&Atilde;O<span class="style11"></span></strong></td>
-       </tr>
+    <tr style="color:#fff">
+
+      <td colspan="2" bgcolor="#ccc" class="style24" style="border: 0.3px solid #">
+      <center><b><?php echo (@mysql_result($rs,$i,'c.descricao'));?><b></center>
+
+    </tr>
+
+    <tr style="color:#fff">
+      <td bgcolor="#ccc" class="style24" style="border: 1px solid #000000;"><center><strong><span class="style1">CANDIDATOS</span></strong></center></td>
+      </tr>
        <?php }
  ?>
-       <!-- populando tabela -->
-       <tr>
-         <td class="style11" style="border: 0.5px solid #000000; text-align:center"><center><strong> <?php echo "000".@mysql_result($rs,$i,'i.idinscricao');?></strong></center></td>
-         <td class="style11"  style="text-align:center"><center><strong><?php echo utf8_decode(@mysql_result($rs,$i,'i.pontos'));?></strong></center></td>
-       </tr>
-       <?php }
+
+    <!-- populando tabela -->
+
+   
+    <tr>
+      <td class="style33" style="border: 1px solid #000000;"><span class="style34"><strong>
+        
+        
+          
+          <p class="style1"><?php echo html_entity_decode(@mysql_result($rs,$i,'i.nome'));?></p>
+          
+          
+        
+      </strong></span></td>
+
+      </tr>
+    <?php }
 	  
 	   ?>
-       <tr>
-         <td colspan="2" class="style33" style="border: 1px solid #000000;"><?php echo "Total de inscritos: ".$linha;?></td>
-       </tr>
-     </table>
-   </center> 
+    <tr>
+      <td class="style33" style="border: 1px solid #000000;"><?php echo "Total de inscritos: ".$linha;?></td>
+      </tr>
+
+</table>
+</center> 
 <?php }
 	  
 	  ?>

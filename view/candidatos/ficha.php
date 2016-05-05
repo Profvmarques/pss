@@ -1,11 +1,7 @@
 <?php
-
 ob_start();  //inicia o buffer
-
 require_once('../../controles/relatorios.php');
-
 Processo('fichaCandidato');
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
