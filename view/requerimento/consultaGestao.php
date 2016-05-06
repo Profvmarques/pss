@@ -24,10 +24,10 @@ Processo('consulta');
 								  <?php for($i=0;$i<$linhaGestor;$i++){?>
                                     <tr class="table-flag-blue">
                                       <td width="24"><input name="ch<?php echo $i;?>" type="checkbox" id="ch<?php echo $i;?>"></td>
-                                      <td><?php echo utf8_encode(mysql_result($rsGestor,$i,'dh'));?></td>
-                                      <td><?php echo utf8_encode(mysql_result($rsGestor,$i,'r.descricao'));?></td>
-                                      <td><?php echo utf8_encode(mysql_result($rsGestor,$i,'i.idinscricao'));?></td>
-                                      <td><?php echo utf8_encode(mysql_result($rsGestor,$i,'i.nome'));?></td>
+                                      <td><?php echo utf8_decode(mysql_result($rsGestor,$i,'dh'));?></td>
+                                      <td><?php echo html_entity_decode(mysql_result($rsGestor,$i,'r.descricao'));?></td>
+                                      <td><?php echo utf8_decode(mysql_result($rsGestor,$i,'i.idinscricao'));?></td>
+                                      <td><b><?php echo utf8_decode(mysql_result($rsGestor,$i,'i.nome'));?></b></td>
                                       <td><textarea name="resposta<?php echo $i;?>" rows="5" class="input-xlarge" id="resposta<?php echo $i;?>" placeholder="" ></textarea></td>
                                     </tr>
 									<?php }?>
