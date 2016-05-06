@@ -146,36 +146,14 @@ if ($_SESSION['idperfil']==2){
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="default.php?pg=dmlldy9wdWJsaWNvL2luY2x1aXIzLnBocA==&amp;form=UGFpbmVs" class="navbar-brand">Principal</a>
+            <a href="default.php?pg=dmlldy9wdWJsaWNvL2luY2x1aXJHZXN0YW8ucGhw&form=UGFpbmVs" class="navbar-brand">Principal</a>
         </div>
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 
                 
-                
-            <li class="dropdown">
-               <a data-toggle="dropdown" class="dropdown-toggle" href="#">Cadastros <b class="caret"></b></a>
-                    
-               <ul role="menu" class="dropdown-menu">
-                <li><a href="default.php?pg=dmlldy9jYXJnb3MvaW5jbHVpci5waHA=﻿﻿﻿&form=Q2FkYXN0cm8gZGUgQ2FyZ29z﻿﻿﻿">Cargos</a></li>
-                <li><a href="default.php?pg=dmlldy9leHBlcmllbmNpYS9pbmNsdWlyLnBocA==&form=Q2FkYXN0cm8gZGUgRXhwZXJpw6puY2lh﻿﻿﻿">Experiencia</a></li>
-                <li><a href="default.php?pg=dmlldy90aXR1bGFjYW8vaW5jbHVpci5waHA=&form=Q2FkYXN0cm8gZGUgVGl0dWxhw6fDo28=﻿﻿﻿">Titulação</a></li>
-                <li><a href="default.php?pg=dmlldy91c3Vhcmlvcy9pbmNsdWlyLnBocA==&form=Q2FkYXN0cm8gZGUgVXN1YXJpb3M=">Usuários</a></li>                                                  
-                                                          </ul>
-                </li>
-                
-                
-                
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Consulta<b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-                    <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Cargos</a></li>
-                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Experiencia</a></li>
-                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Titulação</a></li>
-                <li><a href="default.php?pg=dmlldy92YWdhcy9pbmNsdWlyLnBocA==&amp;form=Q2FkYXN0cm8gZGUgVmFnYXM=">Usuários</a></li>
-                    </ul>
-                </li>
+          
                 
                 <li><a href="logoff.php">Sair</a></li>
             </ul>

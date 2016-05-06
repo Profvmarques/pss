@@ -62,22 +62,20 @@ function Processo($Processo) {
             global $linha;
 
             global $rs;
-
             global $linha2;
-
             global $rs2;
-
             global $linha3;
-
             global $rs3;
-
             global $linha4;
-
             global $rs4;
-
             global $linha5;
-
-            global $rs5;
+            global $rs5;            
+            global $linha6;
+            global $rs6;
+            
+            $usuarios->consultar("select count(*) as total from requerimento where situacao='EM ANALISE'");
+            $linha6 = $usuarios->Linha;
+            $rs6 = $usuarios->Result;
 
             $usuarios->consultar("select * from cargos order by descricao;");
             $linha = $usuarios->Linha;
