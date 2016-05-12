@@ -49,7 +49,8 @@ p.at { font-weight:normal; }
             <li><a href="ERRATA_II.PDF" target="_blank"title="">ERRATA II</a></li>
             <li><a href="#" title="" style="color:#bfbdbd; text-decoration:none; cursor:text;">RESULTADOS</a></li>
             <li><a href="previainscricao.pdf" target="_blank" title=""  text-decoration:none; cursor:text;">PUBLICAÇÃO PRÉVIA DA HOMOLOGAÇÃO DAS INSCRIÇÕES</a></li>
-            <li><a href="previainscricao.pdf" target="_blank" title=""  style="color:#FF0000; text-decoration:none; cursor:text; ">PARA TER ACESSO AO RECURSO DO EDITAL, BASTA IDENTIFICAR-SE ABAIXO</a></li>
+            <li><a href="EDITAL_ENTREVISTA.pdf" target="_blank" title=""  text-decoration:none; cursor:text;">PUBLICAÇÃO PRÉVIA DAS INSCRIÇÕES APROVADAS PARA A ENTREVISTA</a></li>
+           <!-- <li><a href="previainscricao.pdf" target="_blank" title=""  style="color:#FF0000; text-decoration:none; cursor:text; ">PARA TER ACESSO AO RECURSO DO EDITAL, BASTA IDENTIFICAR-SE ABAIXO</a></li>-->
           </ul> 
       <div class="panel panel-primary" style="margin-top:30px;">
         <div class="panel-heading">
